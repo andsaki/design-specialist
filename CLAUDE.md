@@ -46,6 +46,46 @@
 - **HTML/CSS/JavaScript** - ピュアなWeb技術
 - モダンCSS（カスタムプロパティ、グリッド、フレックスボックス、アニメーション）
 
+## 開発ツール
+
+### TypeScript/JavaScript開発支援
+
+#### LSP (Language Server Protocol)
+
+プロジェクトのコード解析に以下のLSPツールを活用：
+
+**シンボル検索とナビゲーション**
+- `LSP(goToDefinition)` - シンボルの定義位置へジャンプ
+- `LSP(findReferences)` - シンボルへのすべての参照を検索
+- `LSP(goToImplementation)` - インターフェースの実装を検索
+- `LSP(workspaceSymbol)` - プロジェクト全体からシンボルを検索
+
+**型情報と分析**
+- `LSP(hover)` - 型情報やドキュメントを取得
+- `LSP(documentSymbol)` - ファイル内のシンボル一覧を取得
+- `mcp__ide__getDiagnostics` - TypeScriptのエラーや警告を取得
+
+#### @mizchi/lsmcp (オプション)
+
+より高度なTypeScript解析が必要な場合：
+
+```bash
+# プロジェクト初期化
+npx @mizchi/lsmcp init -p tsgo
+
+# シンボルインデックス構築
+npx @mizchi/lsmcp index
+
+# MCPサーバーとして登録（推奨）
+claude mcp add lsmcp npx -- -y @mizchi/lsmcp -p tsgo
+```
+
+### Web検索・調査
+
+最新のライブラリやドキュメントの調査：
+- `WebSearch` - 最新情報の検索
+- `WebFetch` - Webページの内容を取得・分析
+
 ## フロントエンド美学ガイドライン
 
 ### 1. タイポグラフィ
