@@ -1,0 +1,479 @@
+---
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>RETRO FUTURISTIC</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!-- Scanlines -->
+		<div class="scanlines"></div>
+
+		<!-- Header -->
+		<header class="header">
+			<a href="/" class="back glitch" data-text="← BACK">← BACK</a>
+			<div class="title glow">RETRO_FUTURISTIC</div>
+		</header>
+
+		<!-- Hero -->
+		<section class="hero">
+			<div class="grid-bg"></div>
+			<div class="hero-content">
+				<div class="badge">[ CYBER_PUNK_1984 ]</div>
+				<h1 class="glitch-title" data-text="THE FUTURE">
+					THE FUTURE
+				</h1>
+				<h2 class="subtitle">WAS YESTERDAY</h2>
+				<p class="tagline">
+					ネオン / グリッチ / サイバーパンク
+				</p>
+			</div>
+		</section>
+
+		<!-- Features -->
+		<section class="features">
+			<div class="container">
+				<h2 class="section-title glow">[ FEATURES ]</h2>
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="feature-icon">▲</div>
+						<h3>NEON COLORS</h3>
+						<p>シアン、マゼンタ、イエロー。80年代の未来感を再現</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">●</div>
+						<h3>GLITCH EFFECT</h3>
+						<p>デジタルノイズとグリッチアニメーションで不安定な美学</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">■</div>
+						<h3>CYBER AESTHETICS</h3>
+						<p>サイバーパンク世界観を表現するビジュアルデザイン</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Grid Section -->
+		<section class="grid-section">
+			<div class="container">
+				<h2 class="section-title glow">[ PHILOSOPHY ]</h2>
+				<div class="content-box">
+					<p class="mono">
+						> LOADING PHILOSOPHY.exe<br/>
+						> ...<br/>
+						> COMPLETE<br/><br/>
+
+						過去が夢見た未来。<br/>
+						80年代のSF映画が描いた2020年代。<br/>
+						それは現実にはならなかった。<br/><br/>
+
+						しかし、その美学は色褪せない。<br/>
+						ネオンが照らす雨の街。<br/>
+						CRTモニターの走査線。<br/>
+						VHSノイズのグリッチ。<br/><br/>
+
+						レトロフューチャリズムは、<br/>
+						ノスタルジアと未来への憧憬が交差する<br/>
+						独特な美的空間を創造する。
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Color Palette -->
+		<section class="palette">
+			<div class="container">
+				<h2 class="section-title glow">[ COLOR_PALETTE ]</h2>
+				<div class="palette-grid">
+					<div class="color-box cyan">
+						<div class="color-code">#00FFFF</div>
+						<div class="color-name">CYAN</div>
+					</div>
+					<div class="color-box magenta">
+						<div class="color-code">#FF00FF</div>
+						<div class="color-name">MAGENTA</div>
+					</div>
+					<div class="color-box yellow">
+						<div class="color-code">#FFFF00</div>
+						<div class="color-name">YELLOW</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="footer-content">
+				<div class="glow">RETRO_FUTURISTIC_EXPERIMENT</div>
+				<div>2026_[NO_COPYRIGHT]</div>
+			</div>
+		</footer>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: 'Orbitron', sans-serif;
+				background: #0a0a0f;
+				color: #00ffff;
+				position: relative;
+				overflow-x: hidden;
+			}
+
+			/* Scanlines Effect */
+			.scanlines {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: repeating-linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0.15),
+					rgba(0, 0, 0, 0.15) 1px,
+					transparent 1px,
+					transparent 2px
+				);
+				pointer-events: none;
+				z-index: 9999;
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
+
+			/* Glow Effect */
+			.glow {
+				text-shadow:
+					0 0 10px #00ffff,
+					0 0 20px #00ffff,
+					0 0 30px #00ffff;
+			}
+
+			/* Glitch Effect */
+			.glitch {
+				position: relative;
+				animation: glitch 3s infinite;
+			}
+
+			@keyframes glitch {
+				0%, 100% {
+					transform: translate(0);
+				}
+				20% {
+					transform: translate(-2px, 2px);
+				}
+				40% {
+					transform: translate(-2px, -2px);
+				}
+				60% {
+					transform: translate(2px, 2px);
+				}
+				80% {
+					transform: translate(2px, -2px);
+				}
+			}
+
+			/* Header */
+			.header {
+				padding: 1.5rem 2rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 2px solid #00ffff;
+				background: rgba(10, 10, 15, 0.8);
+				backdrop-filter: blur(10px);
+			}
+
+			.back {
+				color: #00ffff;
+				text-decoration: none;
+				font-weight: 700;
+				padding: 0.5rem 1rem;
+				border: 2px solid #00ffff;
+				transition: all 0.3s;
+			}
+
+			.back:hover {
+				background: #00ffff;
+				color: #0a0a0f;
+				box-shadow: 0 0 20px #00ffff;
+			}
+
+			.title {
+				font-weight: 900;
+			}
+
+			/* Hero */
+			.hero {
+				position: relative;
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+			}
+
+			.grid-bg {
+				position: absolute;
+				inset: 0;
+				background:
+					linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+					linear-gradient(0deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+				background-size: 50px 50px;
+				transform: perspective(500px) rotateX(60deg);
+				transform-origin: center bottom;
+				animation: gridMove 20s linear infinite;
+			}
+
+			@keyframes gridMove {
+				0% {
+					transform: perspective(500px) rotateX(60deg) translateY(0);
+				}
+				100% {
+					transform: perspective(500px) rotateX(60deg) translateY(50px);
+				}
+			}
+
+			.hero-content {
+				position: relative;
+				z-index: 1;
+				text-align: center;
+				padding: 2rem;
+			}
+
+			.badge {
+				display: inline-block;
+				border: 2px solid #ff00ff;
+				color: #ff00ff;
+				padding: 0.5rem 1.5rem;
+				margin-bottom: 2rem;
+				font-size: 0.9rem;
+				animation: pulse 2s infinite;
+			}
+
+			@keyframes pulse {
+				0%, 100% {
+					box-shadow: 0 0 10px #ff00ff;
+				}
+				50% {
+					box-shadow: 0 0 30px #ff00ff;
+				}
+			}
+
+			.glitch-title {
+				font-size: clamp(4rem, 15vw, 10rem);
+				font-weight: 900;
+				color: #00ffff;
+				text-shadow:
+					0 0 10px #00ffff,
+					0 0 20px #00ffff,
+					2px 2px 0 #ff00ff,
+					-2px -2px 0 #ffff00;
+				margin-bottom: 1rem;
+				animation: titleGlitch 5s infinite;
+			}
+
+			@keyframes titleGlitch {
+				0%, 100% {
+					text-shadow:
+						0 0 10px #00ffff,
+						0 0 20px #00ffff,
+						2px 2px 0 #ff00ff,
+						-2px -2px 0 #ffff00;
+				}
+				25% {
+					text-shadow:
+						0 0 10px #00ffff,
+						0 0 20px #00ffff,
+						-2px 2px 0 #ff00ff,
+						2px -2px 0 #ffff00;
+				}
+				50% {
+					text-shadow:
+						0 0 10px #00ffff,
+						0 0 20px #00ffff,
+						2px -2px 0 #ff00ff,
+						-2px 2px 0 #ffff00;
+				}
+				75% {
+					text-shadow:
+						0 0 10px #00ffff,
+						0 0 20px #00ffff,
+						-2px -2px 0 #ff00ff,
+						2px 2px 0 #ffff00;
+				}
+			}
+
+			.subtitle {
+				font-size: clamp(2rem, 6vw, 4rem);
+				font-weight: 900;
+				color: #ff00ff;
+				text-shadow: 0 0 20px #ff00ff;
+				margin-bottom: 2rem;
+			}
+
+			.tagline {
+				font-size: 1.2rem;
+				color: #ffff00;
+			}
+
+			/* Features */
+			.features {
+				padding: 6rem 0;
+				background: linear-gradient(180deg, #0a0a0f 0%, #1a0a1f 100%);
+			}
+
+			.section-title {
+				font-size: 2.5rem;
+				font-weight: 900;
+				text-align: center;
+				margin-bottom: 4rem;
+			}
+
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+			}
+
+			.feature-card {
+				border: 2px solid #00ffff;
+				padding: 2.5rem;
+				background: rgba(0, 255, 255, 0.05);
+				transition: all 0.3s;
+			}
+
+			.feature-card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+				background: rgba(0, 255, 255, 0.1);
+			}
+
+			.feature-icon {
+				font-size: 3rem;
+				color: #ff00ff;
+				text-shadow: 0 0 20px #ff00ff;
+				margin-bottom: 1.5rem;
+			}
+
+			.feature-card h3 {
+				font-size: 1.5rem;
+				margin-bottom: 1rem;
+				color: #00ffff;
+			}
+
+			.feature-card p {
+				line-height: 1.6;
+				color: #aaa;
+			}
+
+			/* Grid Section */
+			.grid-section {
+				padding: 6rem 0;
+			}
+
+			.content-box {
+				border: 2px solid #ff00ff;
+				padding: 3rem;
+				background: rgba(255, 0, 255, 0.05);
+			}
+
+			.mono {
+				font-family: 'Courier New', monospace;
+				line-height: 1.8;
+				color: #00ffff;
+			}
+
+			/* Color Palette */
+			.palette {
+				padding: 6rem 0;
+				background: linear-gradient(180deg, #0a0a0f 0%, #0f0a1a 100%);
+			}
+
+			.palette-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 2rem;
+			}
+
+			.color-box {
+				aspect-ratio: 1;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				border: 3px solid;
+				font-weight: 900;
+				transition: all 0.3s;
+			}
+
+			.color-box:hover {
+				transform: scale(1.05);
+			}
+
+			.cyan {
+				background: #00ffff;
+				border-color: #00ffff;
+				color: #0a0a0f;
+				box-shadow: 0 0 30px #00ffff;
+			}
+
+			.magenta {
+				background: #ff00ff;
+				border-color: #ff00ff;
+				color: #0a0a0f;
+				box-shadow: 0 0 30px #ff00ff;
+			}
+
+			.yellow {
+				background: #ffff00;
+				border-color: #ffff00;
+				color: #0a0a0f;
+				box-shadow: 0 0 30px #ffff00;
+			}
+
+			.color-code {
+				font-size: 1.5rem;
+				margin-bottom: 1rem;
+			}
+
+			.color-name {
+				font-size: 2rem;
+			}
+
+			/* Footer */
+			.footer {
+				padding: 2rem;
+				border-top: 2px solid #00ffff;
+			}
+
+			.footer-content {
+				display: flex;
+				justify-content: space-between;
+				font-weight: 700;
+			}
+
+			@media (max-width: 768px) {
+				.footer-content {
+					flex-direction: column;
+					gap: 1rem;
+					text-align: center;
+				}
+			}
+		</style>
+	</body>
+</html>
