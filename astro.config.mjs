@@ -3,6 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://andsaki.github.io/patterns/',
-	base: '/patterns/'
+	site: 'https://andsaki.github.io/design-specialist/',
+	base: '/design-specialist/'
 });
