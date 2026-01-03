@@ -1,4 +1,5 @@
 ---
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -14,7 +15,7 @@
 	<body>
 		<!-- Header -->
 		<header class="header">
-			<a href="/" class="back">← Back</a>
+			<a href={base} class="back">← Back</a>
 			<div class="issue">Issue 01 / 2026</div>
 		</header>
 

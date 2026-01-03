@@ -1,5 +1,7 @@
 ---
 import { patterns } from '../data/patterns';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -7,7 +9,7 @@ import { patterns } from '../data/patterns';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
 		<meta name="generator" content={Astro.generator} />
 		<title>AI Design Patterns - デザインパターン実験</title>
 		<meta name="description" content="AIデザインの様々なパターンを実験・比較するプロジェクト" />
@@ -29,7 +31,7 @@ import { patterns } from '../data/patterns';
 			<div class="container">
 				<div class="patterns-grid">
 					{patterns.map((pattern) => (
-						<a href={`/patterns/${pattern.id}`} class="pattern-card">
+						<a href={`${base}patterns/${pattern.id}`} class="pattern-card">
 							<div class="pattern-header">
 								<h2>{pattern.title}</h2>
 								<p class="pattern-subtitle">{pattern.subtitle}</p>
