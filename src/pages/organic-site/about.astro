@@ -1,7 +1,7 @@
 ---
 import Header from '../../organic-site/components/Header.astro';
 import Footer from '../../organic-site/components/Footer.astro';
-import Icons from '../../organic-site/components/Icons.astro';
+import { Globe, Sprout, User } from 'lucide-astro';
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -43,7 +43,7 @@ const base = import.meta.env.BASE_URL;
 			<div class="container">
 				<div class="mission-grid">
 					<div class="mission-card">
-						<div class="mission-icon"><Icons name="globe" size={80} color="#6a994e" /></div>
+						<div class="mission-icon"><Globe size={80} /></div>
 						<h2>Mission</h2>
 						<h3>私たちの使命</h3>
 						<p>
@@ -53,7 +53,7 @@ const base = import.meta.env.BASE_URL;
 					</div>
 
 					<div class="mission-card">
-						<div class="mission-icon"><Icons name="sprout" size={80} color="#6a994e" /></div>
+						<div class="mission-icon"><Sprout size={80} /></div>
 						<h2>Vision</h2>
 						<h3>目指す未来</h3>
 						<p>
@@ -168,7 +168,7 @@ const base = import.meta.env.BASE_URL;
 
 				<div class="team-grid">
 					<div class="team-member">
-						<div class="member-avatar"><Icons name="user" size={64} color="#6a994e" /></div>
+						<div class="member-avatar"><User size={64} /></div>
 						<h3>田中 太郎</h3>
 						<div class="member-role">創業者 / クリエイティブディレクター</div>
 						<p>
@@ -177,7 +177,7 @@ const base = import.meta.env.BASE_URL;
 					</div>
 
 					<div class="team-member">
-						<div class="member-avatar"><Icons name="user" size={64} color="#6a994e" /></div>
+						<div class="member-avatar"><User size={64} /></div>
 						<h3>佐藤 花子</h3>
 						<div class="member-role">UXデザイナー</div>
 						<p>
@@ -186,7 +186,7 @@ const base = import.meta.env.BASE_URL;
 					</div>
 
 					<div class="team-member">
-						<div class="member-avatar"><Icons name="user" size={64} color="#6a994e" /></div>
+						<div class="member-avatar"><User size={64} /></div>
 						<h3>鈴木 一郎</h3>
 						<div class="member-role">ビジネスストラテジスト</div>
 						<p>

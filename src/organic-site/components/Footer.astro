@@ -1,5 +1,5 @@
 ---
-import Icons from './Icons.astro';
+import { Leaf, Twitter, Instagram, Facebook } from 'lucide-astro';
 const base = import.meta.env.BASE_URL;
 const currentYear = new Date().getFullYear();
 ---
@@ -9,7 +9,7 @@ const currentYear = new Date().getFullYear();
 		<div class="footer-content">
 			<div class="footer-section">
 				<div class="footer-logo">
-					<span class="logo-icon"><Icons name="leaf" size={36} color="#8b5a3c" /></span>
+					<span class="logo-icon"><Leaf size={36} /></span>
 					<span class="logo-text">Organic</span>
 				</div>
 				<p class="footer-description">
@@ -31,9 +31,9 @@ const currentYear = new Date().getFullYear();
 			<div class="footer-section">
 				<h3>フォロー</h3>
 				<div class="social-links">
-					<a href="#" aria-label="Twitter" class="social-link"><Icons name="twitter" size={24} /></a>
-					<a href="#" aria-label="Instagram" class="social-link"><Icons name="instagram" size={24} /></a>
-					<a href="#" aria-label="Facebook" class="social-link"><Icons name="facebook" size={24} /></a>
+					<a href="#" aria-label="Twitter" class="social-link"><Twitter size={24} /></a>
+					<a href="#" aria-label="Instagram" class="social-link"><Instagram size={24} /></a>
+					<a href="#" aria-label="Facebook" class="social-link"><Facebook size={24} /></a>
 				</div>
 			</div>
 		</div>

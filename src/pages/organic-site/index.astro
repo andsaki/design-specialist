@@ -1,7 +1,7 @@
 ---
 import Header from '../../organic-site/components/Header.astro';
 import Footer from '../../organic-site/components/Footer.astro';
-import Icons from '../../organic-site/components/Icons.astro';
+import { Sprout, Leaf, Recycle } from 'lucide-astro';
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -57,7 +57,7 @@ const base = import.meta.env.BASE_URL;
 
 				<div class="features-grid">
 					<div class="feature-card">
-						<div class="feature-icon"><Icons name="sprout" size={64} color="#6a994e" /></div>
+						<div class="feature-icon"><Sprout size={64} /></div>
 						<h3>サステナブル</h3>
 						<p>
 							持続可能性を第一に考え、環境に配慮したデザインソリューションを提供します。
@@ -66,7 +66,7 @@ const base = import.meta.env.BASE_URL;
 					</div>
 
 					<div class="feature-card">
-						<div class="feature-icon"><Icons name="leaf" size={64} color="#6a994e" /></div>
+						<div class="feature-icon"><Leaf size={64} /></div>
 						<h3>オーガニック</h3>
 						<p>
 							自然の流れや形状を取り入れた、温かみのあるデザイン。
@@ -75,7 +75,7 @@ const base = import.meta.env.BASE_URL;
 					</div>
 
 					<div class="feature-card">
-						<div class="feature-icon"><Icons name="recycle" size={64} color="#6a994e" /></div>
+						<div class="feature-icon"><Recycle size={64} /></div>
 						<h3>循環型思考</h3>
 						<p>
 							すべてのプロセスで循環型のアプローチを採用。
@@ -106,6 +106,41 @@ const base = import.meta.env.BASE_URL;
 					<div class="services-visual">
 						<div class="visual-shape"></div>
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Pricing Preview -->
+		<section class="pricing-preview">
+			<div class="container">
+				<div class="section-header">
+					<h2>料金プラン</h2>
+					<p>プロジェクトの規模に合わせて、柔軟にご対応します</p>
+				</div>
+
+				<div class="pricing-cards">
+					<a href={`${base}organic-site/services#pricing`} class="pricing-preview-card">
+						<div class="plan-name">スタータープラン</div>
+						<div class="plan-price">¥300,000<span>〜</span></div>
+						<p class="plan-desc">小規模プロジェクトや、初めてのお客様におすすめ</p>
+					</a>
+
+					<a href={`${base}organic-site/services#pricing`} class="pricing-preview-card featured">
+						<div class="popular-tag">人気</div>
+						<div class="plan-name">スタンダードプラン</div>
+						<div class="plan-price">¥800,000<span>〜</span></div>
+						<p class="plan-desc">中規模プロジェクト向けの充実したプラン</p>
+					</a>
+
+					<a href={`${base}organic-site/services#pricing`} class="pricing-preview-card">
+						<div class="plan-name">エンタープライズプラン</div>
+						<div class="plan-price">要相談</div>
+						<p class="plan-desc">大規模プロジェクトや長期パートナーシップ向け</p>
+					</a>
+				</div>
+
+				<div class="pricing-cta">
+					<a href={`${base}organic-site/services`} class="btn btn-outline">すべての料金プランを見る →</a>
 				</div>
 			</div>
 		</section>
@@ -385,6 +420,96 @@ const base = import.meta.env.BASE_URL;
 				animation: morphing 15s infinite ease-in-out;
 			}
 
+			/* Pricing Preview */
+			.pricing-preview {
+				padding: var(--spacing-4xl) 0;
+				background: var(--color-surface);
+			}
+
+			.pricing-cards {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: var(--spacing-lg);
+				margin-bottom: var(--spacing-2xl);
+			}
+
+			.pricing-preview-card {
+				background: var(--color-background);
+				padding: var(--spacing-2xl);
+				border-radius: var(--radius-lg);
+				box-shadow: var(--shadow-sm);
+				text-align: center;
+				transition: var(--transition-base);
+				text-decoration: none;
+				color: inherit;
+				position: relative;
+				display: block;
+			}
+
+			.pricing-preview-card:hover {
+				transform: translateY(-10px);
+				box-shadow: var(--shadow-lg);
+			}
+
+			.pricing-preview-card.featured {
+				background: linear-gradient(135deg, rgba(139, 90, 60, 0.05), rgba(106, 153, 78, 0.05));
+				border: 2px solid var(--color-secondary);
+			}
+
+			.popular-tag {
+				position: absolute;
+				top: -12px;
+				left: 50%;
+				transform: translateX(-50%);
+				background: var(--color-secondary);
+				color: white;
+				padding: var(--spacing-xs) var(--spacing-md);
+				border-radius: var(--radius-full);
+				font-size: var(--font-size-xs);
+				font-weight: 700;
+			}
+
+			.plan-name {
+				font-family: var(--font-display);
+				font-size: var(--font-size-lg);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-sm);
+				font-weight: 600;
+			}
+
+			.plan-price {
+				font-family: var(--font-display);
+				font-size: var(--font-size-3xl);
+				font-weight: 700;
+				color: var(--color-secondary);
+				margin-bottom: var(--spacing-md);
+				display: flex;
+				align-items: baseline;
+				justify-content: center;
+				gap: 0.25rem;
+			}
+
+			/* テキストベースの価格（要相談など）用に小さめのサイズ */
+			.pricing-preview-card:last-child .plan-price {
+				font-size: var(--font-size-2xl);
+				white-space: nowrap;
+			}
+
+			.plan-price span {
+				font-size: var(--font-size-base);
+				font-weight: 400;
+			}
+
+			.plan-desc {
+				color: var(--color-text-light);
+				font-size: var(--font-size-sm);
+				line-height: 1.6;
+			}
+
+			.pricing-cta {
+				text-align: center;
+			}
+
 			/* CTA Section */
 			.cta-section {
 				padding: var(--spacing-4xl) 0;
@@ -416,6 +541,12 @@ const base = import.meta.env.BASE_URL;
 				.services-content {
 					grid-template-columns: 1fr;
 					gap: var(--spacing-2xl);
+				}
+
+				.pricing-cards {
+					grid-template-columns: 1fr;
+					max-width: 500px;
+					margin: 0 auto var(--spacing-2xl);
 				}
 			}
 
@@ -454,6 +585,10 @@ const base = import.meta.env.BASE_URL;
 				}
 
 				.services-preview {
+					padding: var(--spacing-3xl) 0;
+				}
+
+				.pricing-preview {
 					padding: var(--spacing-3xl) 0;
 				}
 
@@ -498,6 +633,18 @@ const base = import.meta.env.BASE_URL;
 
 				.services-preview {
 					padding: var(--spacing-2xl) 0;
+				}
+
+				.pricing-preview {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.pricing-preview-card {
+					padding: var(--spacing-lg);
+				}
+
+				.plan-price {
+					font-size: var(--font-size-2xl);
 				}
 
 				.cta-section {

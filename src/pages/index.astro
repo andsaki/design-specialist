@@ -29,6 +29,8 @@ const base = import.meta.env.BASE_URL;
 		<!-- Patterns Grid -->
 		<section class="patterns">
 			<div class="container">
+				<h2 class="section-title">デザインパターン集</h2>
+				<p class="section-description">様々な美的方向性で実装されたランディングページ</p>
 				<div class="patterns-grid">
 					{patterns.map((pattern) => (
 						<a href={`${base}patterns/${pattern.id}`} class="pattern-card">
@@ -60,6 +62,30 @@ const base = import.meta.env.BASE_URL;
 						</a>
 					))}
 				</div>
+			</div>
+		</section>
+
+		<!-- Full Site Section -->
+		<section class="full-site">
+			<div class="container">
+				<h2 class="section-title">完全なマルチページサイト</h2>
+				<p class="section-description">Organicデザイン思想に基づいた実装例</p>
+				<a href={`${base}organic-site/`} class="site-card">
+					<div class="site-hero">
+						<div class="site-icon">🌿</div>
+						<h3>Organic Site</h3>
+					</div>
+					<p class="site-description">
+						自然な曲線とオーガニックな形状、アースカラーを基調とした優しい配色。<br />
+						流れるようなアニメーションとインタラクションで、心地よい体験を提供します。
+					</p>
+					<div class="site-features">
+						<div class="feature">✓ 4ページ構成（Home / About / Services / Contact）</div>
+						<div class="feature">✓ スマートフォンレスポンシブ対応</div>
+						<div class="feature">✓ スクロールアニメーション実装</div>
+					</div>
+					<div class="site-cta">サイトを見る →</div>
+				</a>
 			</div>
 		</section>
 
@@ -120,9 +146,24 @@ const base = import.meta.env.BASE_URL;
 				margin: 0 auto;
 			}
 
+			/* Section Styles */
+			.section-title {
+				font-size: 2.5rem;
+				font-weight: 700;
+				text-align: center;
+				margin-bottom: 1rem;
+			}
+
+			.section-description {
+				text-align: center;
+				opacity: 0.8;
+				margin-bottom: 3rem;
+				font-size: 1.1rem;
+			}
+
 			/* Patterns Section */
 			.patterns {
-				padding: 4rem 0 6rem;
+				padding: 4rem 0 2rem;
 			}
 
 			.patterns-grid {
@@ -215,6 +256,89 @@ const base = import.meta.env.BASE_URL;
 				border: 1px solid rgba(255, 255, 255, 0.1);
 			}
 
+			/* Full Site Section */
+			.full-site {
+				padding: 4rem 0 6rem;
+			}
+
+			.site-card {
+				background: rgba(255, 255, 255, 0.05);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				border-radius: 24px;
+				padding: 3rem;
+				text-decoration: none;
+				color: inherit;
+				transition: all 0.4s;
+				display: block;
+				max-width: 900px;
+				margin: 0 auto;
+			}
+
+			.site-card:hover {
+				transform: translateY(-8px) scale(1.01);
+				background: rgba(255, 255, 255, 0.08);
+				border-color: rgba(102, 126, 234, 0.5);
+				box-shadow: 0 30px 80px rgba(102, 126, 234, 0.2);
+			}
+
+			.site-hero {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+				margin-bottom: 2rem;
+			}
+
+			.site-icon {
+				font-size: 4rem;
+				line-height: 1;
+			}
+
+			.site-hero h3 {
+				font-size: 2.5rem;
+				font-weight: 700;
+				background: linear-gradient(135deg, #81b29a 0%, #6a994e 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			.site-description {
+				line-height: 1.8;
+				opacity: 0.9;
+				margin-bottom: 2rem;
+				font-size: 1.1rem;
+			}
+
+			.site-features {
+				display: flex;
+				flex-direction: column;
+				gap: 0.8rem;
+				margin-bottom: 2rem;
+			}
+
+			.feature {
+				font-size: 1rem;
+				opacity: 0.85;
+				padding-left: 0.5rem;
+			}
+
+			.site-cta {
+				display: inline-block;
+				background: linear-gradient(135deg, #81b29a 0%, #6a994e 100%);
+				color: white;
+				padding: 1rem 2.5rem;
+				border-radius: 50px;
+				font-weight: 600;
+				font-size: 1.1rem;
+				transition: all 0.3s;
+			}
+
+			.site-card:hover .site-cta {
+				transform: translateX(10px);
+				box-shadow: 0 10px 30px rgba(129, 178, 154, 0.4);
+			}
+
 			/* Footer */
 			.footer {
 				padding: 3rem 0;
@@ -239,8 +363,46 @@ const base = import.meta.env.BASE_URL;
 
 			/* Responsive */
 			@media (max-width: 768px) {
+				.hero {
+					padding: 4rem 1.5rem 3rem;
+				}
+
+				.title {
+					font-size: clamp(2rem, 10vw, 3rem);
+				}
+
+				.subtitle {
+					font-size: 1rem;
+				}
+
+				.section-title {
+					font-size: 2rem;
+				}
+
 				.patterns-grid {
 					grid-template-columns: 1fr;
+				}
+
+				.site-card {
+					padding: 2rem;
+				}
+
+				.site-hero {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 1rem;
+				}
+
+				.site-hero h3 {
+					font-size: 2rem;
+				}
+
+				.site-icon {
+					font-size: 3rem;
+				}
+
+				.site-description {
+					font-size: 1rem;
 				}
 			}
 		</style>
