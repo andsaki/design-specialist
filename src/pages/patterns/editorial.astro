@@ -422,12 +422,43 @@ const base = import.meta.env.BASE_URL;
 
 			/* Responsive */
 			@media (max-width: 968px) {
+				.container {
+					padding: 0 2rem;
+				}
+
+				.header {
+					padding: 1.5rem 2rem;
+				}
+
 				.hero {
 					grid-template-columns: 1fr;
+					padding: 4rem 2rem;
+					gap: 3rem;
+				}
+
+				.line-2 {
+					margin-left: 1.5rem;
+				}
+
+				.quote-section {
+					padding: 6rem 2rem;
+				}
+
+				.grid-content {
+					padding: 6rem 0;
 				}
 
 				.grid-layout {
 					grid-template-columns: 1fr;
+					gap: 3rem;
+				}
+
+				.main-article h2 {
+					font-size: 2.5rem;
+				}
+
+				.feature-section {
+					padding: 6rem 0;
 				}
 
 				.feature-grid {
@@ -438,6 +469,10 @@ const base = import.meta.env.BASE_URL;
 					grid-row: auto;
 				}
 
+				.footer {
+					padding: 3rem 2rem;
+				}
+
 				.footer-content {
 					flex-direction: column;
 					gap: 2rem;
@@ -446,6 +481,105 @@ const base = import.meta.env.BASE_URL;
 
 				.footer-right {
 					text-align: left;
+				}
+			}
+
+			@media (max-width: 768px) {
+				.container {
+					padding: 0 1.5rem;
+				}
+
+				.header {
+					padding: 1.2rem 1.5rem;
+				}
+
+				.hero {
+					padding: 3rem 1.5rem;
+					gap: 2rem;
+				}
+
+				.hero h1 {
+					font-size: clamp(3rem, 9vw, 6rem);
+				}
+
+				.subtitle {
+					font-size: 1rem;
+				}
+
+				.quote-section {
+					padding: 5rem 1.5rem;
+				}
+
+				.large-quote {
+					font-size: clamp(2rem, 4vw, 3rem);
+				}
+
+				.grid-content {
+					padding: 5rem 0;
+				}
+
+				.main-article h2 {
+					font-size: 2rem;
+				}
+
+				.lead {
+					font-size: 1.15rem;
+				}
+
+				.sidebar-item {
+					padding: 1.5rem;
+				}
+
+				.feature-section {
+					padding: 5rem 0;
+				}
+
+				.feature-large,
+				.feature-small {
+					padding: 2rem 1.5rem;
+				}
+
+				.number {
+					font-size: 3rem;
+				}
+
+				.footer-title {
+					font-size: 1.5rem;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.container {
+					padding: 0 1rem;
+				}
+
+				.header {
+					padding: 1rem;
+				}
+
+				.hero {
+					padding: 2.5rem 1rem;
+				}
+
+				.line-2 {
+					margin-left: 1rem;
+				}
+
+				.quote-section {
+					padding: 4rem 1rem;
+				}
+
+				.main-article h2 {
+					font-size: 1.75rem;
+				}
+
+				.sidebar-item {
+					padding: 1.2rem;
+				}
+
+				.feature-large,
+				.feature-small {
+					padding: 1.5rem 1rem;
 				}
 			}
 		</style>
