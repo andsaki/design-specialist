@@ -1,0 +1,514 @@
+---
+import Header from '../../organic-site/components/Header.astro';
+import Footer from '../../organic-site/components/Footer.astro';
+import Icons from '../../organic-site/components/Icons.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Organic - 自然と調和するデザイン</title>
+		<meta name="description" content="自然の温かみを感じるデザインで、持続可能な未来を創造します" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href={`${base}organic-site/styles/tokens.css`} />
+	</head>
+	<body>
+		<Header />
+
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="hero-shapes">
+				<div class="shape shape-1"></div>
+				<div class="shape shape-2"></div>
+				<div class="shape shape-3"></div>
+			</div>
+			<div class="container">
+				<div class="hero-content">
+					<div class="badge">〜 Sustainable Design 〜</div>
+					<h1>
+						自然と調和する<br/>
+						デザインで未来を創る
+					</h1>
+					<p class="hero-subtitle">
+						オーガニックな美学とサステナブルな思想を融合させ、<br/>
+						心地よい体験をデザインします
+					</p>
+					<div class="cta-buttons">
+						<a href={`${base}organic-site/services`} class="btn btn-primary">サービスを見る</a>
+						<a href={`${base}organic-site/contact`} class="btn btn-secondary">お問い合わせ</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="features">
+			<div class="container">
+				<div class="section-header">
+					<h2>私たちの強み</h2>
+					<p>自然からインスピレーションを得た、3つの核心的価値</p>
+				</div>
+
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="feature-icon"><Icons name="sprout" size={64} color="#6a994e" /></div>
+						<h3>サステナブル</h3>
+						<p>
+							持続可能性を第一に考え、環境に配慮したデザインソリューションを提供します。
+							長く愛され続けるデザインを目指します。
+						</p>
+					</div>
+
+					<div class="feature-card">
+						<div class="feature-icon"><Icons name="leaf" size={64} color="#6a994e" /></div>
+						<h3>オーガニック</h3>
+						<p>
+							自然の流れや形状を取り入れた、温かみのあるデザイン。
+							人工的な冷たさではなく、人間的な優しさを大切にします。
+						</p>
+					</div>
+
+					<div class="feature-card">
+						<div class="feature-icon"><Icons name="recycle" size={64} color="#6a994e" /></div>
+						<h3>循環型思考</h3>
+						<p>
+							すべてのプロセスで循環型のアプローチを採用。
+							無駄を最小限に抑え、資源を最大限に活用します。
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Preview -->
+		<section class="services-preview">
+			<div class="container">
+				<div class="services-content">
+					<div class="services-text">
+						<h2>サービス</h2>
+						<p class="lead">
+							デザインコンサルティングから実装まで、<br/>
+							トータルでサポートします
+						</p>
+						<p>
+							企業のブランディング、Webサイト制作、プロダクトデザインなど、
+							幅広い領域で自然と調和するデザインを提供しています。
+							私たちは単なるデザインではなく、持続可能な価値創造を目指します。
+						</p>
+						<a href={`${base}organic-site/services`} class="btn btn-outline">サービス詳細を見る →</a>
+					</div>
+					<div class="services-visual">
+						<div class="visual-shape"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="cta-section">
+			<div class="container">
+				<div class="cta-content">
+					<h2>一緒に未来を創りませんか？</h2>
+					<p>
+						あなたのプロジェクトに、自然の温かみと持続可能性を。<br/>
+						まずはお気軽にご相談ください。
+					</p>
+					<a href={`${base}organic-site/contact`} class="btn btn-large">無料相談を申し込む</a>
+				</div>
+			</div>
+		</section>
+
+		<Footer />
+
+		<style>
+			/* Hero Section */
+			.hero {
+				position: relative;
+				min-height: 90vh;
+				display: flex;
+				align-items: center;
+				overflow: hidden;
+			}
+
+			.hero-shapes {
+				position: absolute;
+				inset: 0;
+				z-index: 0;
+			}
+
+			.shape {
+				position: absolute;
+				border-radius: 50% 40% 60% 50%;
+				opacity: 0.15;
+				animation: morphing 20s infinite ease-in-out;
+			}
+
+			.shape-1 {
+				width: 500px;
+				height: 500px;
+				background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+				top: 10%;
+				right: 10%;
+				animation-delay: 0s;
+			}
+
+			.shape-2 {
+				width: 400px;
+				height: 400px;
+				background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+				bottom: 20%;
+				left: 5%;
+				animation-delay: -7s;
+			}
+
+			.shape-3 {
+				width: 350px;
+				height: 350px;
+				background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+				top: 50%;
+				left: 40%;
+				animation-delay: -14s;
+			}
+
+			@keyframes morphing {
+				0%, 100% {
+					border-radius: 50% 40% 60% 50%;
+					transform: translate(0, 0) rotate(0deg);
+				}
+				33% {
+					border-radius: 40% 60% 50% 40%;
+					transform: translate(20px, -30px) rotate(120deg);
+				}
+				66% {
+					border-radius: 60% 50% 40% 60%;
+					transform: translate(-20px, 20px) rotate(240deg);
+				}
+			}
+
+			.hero-content {
+				position: relative;
+				z-index: 1;
+				max-width: 800px;
+			}
+
+			.badge {
+				display: inline-block;
+				padding: var(--spacing-sm) var(--spacing-lg);
+				background: rgba(106, 153, 78, 0.1);
+				border-radius: var(--radius-full);
+				color: var(--color-secondary);
+				margin-bottom: var(--spacing-lg);
+				font-size: var(--font-size-sm);
+			}
+
+			.hero h1 {
+				font-family: var(--font-display);
+				font-size: clamp(3rem, 8vw, 5.5rem);
+				font-weight: 300;
+				line-height: 1.2;
+				margin-bottom: var(--spacing-lg);
+				color: var(--color-primary);
+			}
+
+			.hero-subtitle {
+				font-size: var(--font-size-lg);
+				color: var(--color-text-light);
+				line-height: 1.8;
+				margin-bottom: var(--spacing-xl);
+			}
+
+			.cta-buttons {
+				display: flex;
+				gap: var(--spacing-md);
+			}
+
+			/* Buttons */
+			.btn {
+				display: inline-block;
+				padding: var(--spacing-md) var(--spacing-xl);
+				border-radius: var(--radius-full);
+				text-decoration: none;
+				font-weight: 700;
+				transition: var(--transition-base);
+			}
+
+			.btn-primary {
+				background: var(--color-primary);
+				color: white;
+			}
+
+			.btn-primary:hover {
+				background: var(--color-secondary);
+				transform: translateY(-2px);
+				box-shadow: var(--shadow-md);
+			}
+
+			.btn-secondary {
+				background: transparent;
+				color: var(--color-primary);
+				border: 2px solid var(--color-primary);
+			}
+
+			.btn-secondary:hover {
+				background: var(--color-primary);
+				color: white;
+			}
+
+			.btn-outline {
+				background: transparent;
+				color: var(--color-secondary);
+				border: 2px solid var(--color-secondary);
+				padding: var(--spacing-sm) var(--spacing-lg);
+			}
+
+			.btn-outline:hover {
+				background: var(--color-secondary);
+				color: white;
+			}
+
+			.btn-large {
+				padding: var(--spacing-lg) var(--spacing-3xl);
+				font-size: var(--font-size-lg);
+				background: var(--color-secondary);
+				color: white;
+			}
+
+			.btn-large:hover {
+				background: var(--color-primary);
+				transform: translateY(-3px);
+				box-shadow: var(--shadow-lg);
+			}
+
+			/* Features Section */
+			.features {
+				padding: var(--spacing-4xl) 0;
+				background: var(--color-surface);
+			}
+
+			.section-header {
+				text-align: center;
+				margin-bottom: var(--spacing-3xl);
+			}
+
+			.section-header h2 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-4xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-md);
+			}
+
+			.section-header p {
+				font-size: var(--font-size-lg);
+				color: var(--color-text-light);
+			}
+
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: var(--spacing-xl);
+			}
+
+			.feature-card {
+				background: var(--color-background);
+				padding: var(--spacing-3xl) var(--spacing-lg);
+				border-radius: var(--radius-lg);
+				box-shadow: var(--shadow-sm);
+				transition: var(--transition-base);
+			}
+
+			.feature-card:hover {
+				transform: translateY(-10px);
+				box-shadow: var(--shadow-lg);
+			}
+
+			.feature-icon {
+				font-size: 4rem;
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.feature-card h3 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-2xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-md);
+			}
+
+			.feature-card p {
+				color: var(--color-text-light);
+				line-height: 1.8;
+			}
+
+			/* Services Preview */
+			.services-preview {
+				padding: var(--spacing-4xl) 0;
+			}
+
+			.services-content {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: var(--spacing-3xl);
+				align-items: center;
+			}
+
+			.services-text h2 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-4xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.lead {
+				font-size: var(--font-size-xl);
+				font-weight: 700;
+				color: var(--color-secondary);
+				margin-bottom: var(--spacing-lg);
+				line-height: 1.6;
+			}
+
+			.services-text p {
+				margin-bottom: var(--spacing-lg);
+				line-height: 1.8;
+			}
+
+			.visual-shape {
+				width: 100%;
+				aspect-ratio: 1;
+				background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
+				border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+				box-shadow: var(--shadow-lg);
+				animation: morphing 15s infinite ease-in-out;
+			}
+
+			/* CTA Section */
+			.cta-section {
+				padding: var(--spacing-4xl) 0;
+				background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+				color: white;
+			}
+
+			.cta-content {
+				text-align: center;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+
+			.cta-content h2 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-4xl);
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.cta-content p {
+				font-size: var(--font-size-xl);
+				margin-bottom: var(--spacing-xl);
+				line-height: 1.8;
+				opacity: 0.95;
+			}
+
+			/* Responsive */
+			@media (max-width: 968px) {
+				.services-content {
+					grid-template-columns: 1fr;
+					gap: var(--spacing-2xl);
+				}
+			}
+
+			@media (max-width: 768px) {
+				.hero {
+					min-height: 70vh;
+				}
+
+				.hero h1 {
+					font-size: clamp(2.5rem, 7vw, 4.5rem);
+				}
+
+				.hero-subtitle {
+					font-size: var(--font-size-base);
+				}
+
+				.cta-buttons {
+					flex-direction: column;
+					gap: var(--spacing-sm);
+				}
+
+				.btn {
+					text-align: center;
+				}
+
+				.features {
+					padding: var(--spacing-3xl) 0;
+				}
+
+				.features-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.feature-card {
+					padding: var(--spacing-2xl) var(--spacing-md);
+				}
+
+				.services-preview {
+					padding: var(--spacing-3xl) 0;
+				}
+
+				.section-header h2 {
+					font-size: var(--font-size-3xl);
+				}
+
+				.services-text h2 {
+					font-size: var(--font-size-3xl);
+				}
+
+				.cta-section {
+					padding: var(--spacing-3xl) 0;
+				}
+
+				.cta-content h2 {
+					font-size: var(--font-size-3xl);
+				}
+
+				.cta-content p {
+					font-size: var(--font-size-lg);
+				}
+			}
+
+			@media (max-width: 480px) {
+				.hero {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.badge {
+					font-size: var(--font-size-xs);
+					padding: var(--spacing-xs) var(--spacing-md);
+				}
+
+				.features {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.feature-icon {
+					font-size: 3rem;
+				}
+
+				.services-preview {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.cta-section {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.btn-large {
+					padding: var(--spacing-md) var(--spacing-2xl);
+					font-size: var(--font-size-base);
+				}
+			}
+		</style>
+	</body>
+</html>

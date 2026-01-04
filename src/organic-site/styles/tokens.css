@@ -1,0 +1,89 @@
+/* Organic Design - デザイントークン */
+
+:root {
+	/* カラー */
+	--color-primary: #8b5a3c;
+	--color-secondary: #6a994e;
+	--color-accent: #f2cc8f;
+	--color-background: #faf8f5;
+	--color-surface: #ffffff;
+	--color-text: #3d3d3d;
+	--color-text-light: #6a6a6a;
+
+	/* タイポグラフィ */
+	--font-display: 'Merriweather', serif;
+	--font-body: 'Lato', sans-serif;
+
+	/* フォントサイズ */
+	--font-size-xs: 0.85rem;
+	--font-size-sm: 0.95rem;
+	--font-size-base: 1rem;
+	--font-size-lg: 1.2rem;
+	--font-size-xl: 1.5rem;
+	--font-size-2xl: 2rem;
+	--font-size-3xl: 2.5rem;
+	--font-size-4xl: 3rem;
+
+	/* スペーシング */
+	--spacing-xs: 0.5rem;
+	--spacing-sm: 1rem;
+	--spacing-md: 1.5rem;
+	--spacing-lg: 2rem;
+	--spacing-xl: 3rem;
+	--spacing-2xl: 4rem;
+	--spacing-3xl: 6rem;
+	--spacing-4xl: 8rem;
+
+	/* ボーダーラジウス */
+	--radius-sm: 10px;
+	--radius-md: 20px;
+	--radius-lg: 30px;
+	--radius-full: 9999px;
+
+	/* シャドウ */
+	--shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.06);
+	--shadow-md: 0 10px 40px rgba(0, 0, 0, 0.08);
+	--shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.1);
+
+	/* トランジション */
+	--transition-fast: 0.2s ease;
+	--transition-base: 0.3s ease;
+	--transition-slow: 0.5s ease;
+
+	/* レイアウト */
+	--container-width: 1200px;
+	--header-height: 80px;
+}
+
+/* グローバルリセット */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-body);
+	background: var(--color-background);
+	color: var(--color-text);
+	line-height: 1.7;
+}
+
+/* ユーティリティクラス */
+.container {
+	max-width: var(--container-width);
+	margin: 0 auto;
+	padding: 0 var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 0 var(--spacing-md);
+	}
+}
+
+@media (max-width: 480px) {
+	.container {
+		padding: 0 var(--spacing-sm);
+	}
+}

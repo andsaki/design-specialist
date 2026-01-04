@@ -1,0 +1,173 @@
+---
+import Icons from './Icons.astro';
+const base = import.meta.env.BASE_URL;
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer-content">
+			<div class="footer-section">
+				<div class="footer-logo">
+					<span class="logo-icon"><Icons name="leaf" size={36} color="#8b5a3c" /></span>
+					<span class="logo-text">Organic</span>
+				</div>
+				<p class="footer-description">
+					自然と調和するデザインで、<br/>
+					持続可能な未来を創造します。
+				</p>
+			</div>
+
+			<div class="footer-section">
+				<h3>ナビゲーション</h3>
+				<nav class="footer-nav">
+					<a href={`${base}organic-site/`}>Home</a>
+					<a href={`${base}organic-site/about`}>About</a>
+					<a href={`${base}organic-site/services`}>Services</a>
+					<a href={`${base}organic-site/contact`}>Contact</a>
+				</nav>
+			</div>
+
+			<div class="footer-section">
+				<h3>フォロー</h3>
+				<div class="social-links">
+					<a href="#" aria-label="Twitter" class="social-link"><Icons name="twitter" size={24} /></a>
+					<a href="#" aria-label="Instagram" class="social-link"><Icons name="instagram" size={24} /></a>
+					<a href="#" aria-label="Facebook" class="social-link"><Icons name="facebook" size={24} /></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<p>&copy; {currentYear} Organic. All rights reserved.</p>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.footer {
+		background: var(--color-surface);
+		padding: var(--spacing-4xl) 0 var(--spacing-lg);
+		margin-top: var(--spacing-4xl);
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr;
+		gap: var(--spacing-3xl);
+		margin-bottom: var(--spacing-3xl);
+	}
+
+	.footer-section h3 {
+		font-family: var(--font-display);
+		font-size: var(--font-size-lg);
+		color: var(--color-primary);
+		margin-bottom: var(--spacing-md);
+	}
+
+	.footer-logo {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-sm);
+		font-family: var(--font-display);
+		font-size: var(--font-size-2xl);
+		font-weight: 700;
+		color: var(--color-primary);
+		margin-bottom: var(--spacing-md);
+	}
+
+	.logo-icon {
+		font-size: 2rem;
+	}
+
+	.footer-description {
+		color: var(--color-text-light);
+		line-height: 1.8;
+	}
+
+	.footer-nav {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-sm);
+	}
+
+	.footer-nav a {
+		color: var(--color-text);
+		text-decoration: none;
+		transition: var(--transition-base);
+	}
+
+	.footer-nav a:hover {
+		color: var(--color-secondary);
+		padding-left: var(--spacing-xs);
+	}
+
+	.social-links {
+		display: flex;
+		gap: var(--spacing-md);
+	}
+
+	.social-link {
+		width: 50px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(106, 153, 78, 0.1);
+		border-radius: var(--radius-full);
+		text-decoration: none;
+		color: var(--color-primary);
+		transition: var(--transition-base);
+	}
+
+	.social-link:hover {
+		background: var(--color-secondary);
+		color: white;
+		transform: translateY(-5px);
+	}
+
+	.footer-bottom {
+		padding-top: var(--spacing-lg);
+		border-top: 1px solid rgba(139, 90, 60, 0.1);
+		text-align: center;
+		color: var(--color-text-light);
+		font-size: var(--font-size-sm);
+	}
+
+	@media (max-width: 968px) {
+		.footer-content {
+			grid-template-columns: 1fr;
+			gap: var(--spacing-2xl);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.footer {
+			padding: var(--spacing-3xl) 0 var(--spacing-lg);
+		}
+
+		.footer-content {
+			gap: var(--spacing-xl);
+		}
+	}
+
+	@media (max-width: 480px) {
+		.footer {
+			padding: var(--spacing-2xl) 0 var(--spacing-md);
+		}
+
+		.footer-logo {
+			font-size: var(--font-size-xl);
+		}
+
+		.logo-icon {
+			font-size: 1.5rem;
+		}
+
+		.social-link {
+			width: 45px;
+			height: 45px;
+			font-size: 1.3rem;
+		}
+	}
+</style>

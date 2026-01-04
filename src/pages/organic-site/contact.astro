@@ -1,0 +1,504 @@
+---
+import Header from '../../organic-site/components/Header.astro';
+import Footer from '../../organic-site/components/Footer.astro';
+import Icons from '../../organic-site/components/Icons.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact - Organic</title>
+		<meta name="description" content="お問い合わせ・ご相談はこちらから" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href={`${base}organic-site/styles/tokens.css`} />
+	</head>
+	<body>
+		<Header />
+
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<div class="badge">Contact</div>
+					<h1>
+						お気軽に<br/>
+						ご相談ください
+					</h1>
+					<p class="hero-subtitle">
+						プロジェクトのご相談から些細な質問まで、<br/>
+						どんなことでもお問い合わせください
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="contact">
+			<div class="container">
+				<div class="contact-layout">
+					<!-- Contact Form -->
+					<div class="contact-form">
+						<h2>お問い合わせフォーム</h2>
+						<p class="form-description">
+							以下のフォームからお気軽にお問い合わせください。<br/>
+							2営業日以内にご返信いたします。
+						</p>
+
+						<form class="form">
+							<div class="form-group">
+								<label for="name">お名前 <span class="required">*</span></label>
+								<input type="text" id="name" name="name" required />
+							</div>
+
+							<div class="form-group">
+								<label for="company">会社名・団体名</label>
+								<input type="text" id="company" name="company" />
+							</div>
+
+							<div class="form-group">
+								<label for="email">メールアドレス <span class="required">*</span></label>
+								<input type="email" id="email" name="email" required />
+							</div>
+
+							<div class="form-group">
+								<label for="phone">電話番号</label>
+								<input type="tel" id="phone" name="phone" />
+							</div>
+
+							<div class="form-group">
+								<label for="service">ご相談内容 <span class="required">*</span></label>
+								<select id="service" name="service" required>
+									<option value="">選択してください</option>
+									<option value="branding">ブランドデザイン</option>
+									<option value="web">Webデザイン・開発</option>
+									<option value="uiux">UI/UXデザイン</option>
+									<option value="consulting">サステナブルコンサルティング</option>
+									<option value="product">プロダクトデザイン</option>
+									<option value="education">デザイン教育・ワークショップ</option>
+									<option value="other">その他</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="budget">ご予算</label>
+								<select id="budget" name="budget">
+									<option value="">選択してください</option>
+									<option value="under500">50万円未満</option>
+									<option value="500to1000">50万円〜100万円</option>
+									<option value="1000to3000">100万円〜300万円</option>
+									<option value="over3000">300万円以上</option>
+									<option value="undecided">未定</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="message">お問い合わせ内容 <span class="required">*</span></label>
+								<textarea id="message" name="message" rows="6" required></textarea>
+							</div>
+
+							<button type="submit" class="btn btn-primary">送信する</button>
+						</form>
+					</div>
+
+					<!-- Contact Info -->
+					<div class="contact-info">
+						<div class="info-card">
+							<h3>事業所情報</h3>
+							<div class="info-item">
+								<div class="info-icon"><Icons name="building" size={32} color="#6a994e" /></div>
+								<div>
+									<div class="info-label">会社名</div>
+									<div class="info-value">株式会社 Organic Design</div>
+								</div>
+							</div>
+
+							<div class="info-item">
+								<div class="info-icon"><Icons name="map-pin" size={32} color="#6a994e" /></div>
+								<div>
+									<div class="info-label">所在地</div>
+									<div class="info-value">
+										〒150-0001<br/>
+										東京都渋谷区神宮前1-2-3<br/>
+										オーガニックビル 5F
+									</div>
+								</div>
+							</div>
+
+							<div class="info-item">
+								<div class="info-icon"><Icons name="mail" size={32} color="#6a994e" /></div>
+								<div>
+									<div class="info-label">メール</div>
+									<div class="info-value">hello@organic-design.jp</div>
+								</div>
+							</div>
+
+							<div class="info-item">
+								<div class="info-icon"><Icons name="phone" size={32} color="#6a994e" /></div>
+								<div>
+									<div class="info-label">電話</div>
+									<div class="info-value">03-1234-5678</div>
+								</div>
+							</div>
+
+							<div class="info-item">
+								<div class="info-icon"><Icons name="clock" size={32} color="#6a994e" /></div>
+								<div>
+									<div class="info-label">営業時間</div>
+									<div class="info-value">
+										平日 10:00 - 18:00<br/>
+										（土日祝日は休業）
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="info-card">
+							<h3>SNS</h3>
+							<div class="social-links">
+								<a href="#" class="social-link">
+									<span class="social-icon"><Icons name="twitter" size={24} color="#6a994e" /></span>
+									<span>Twitter</span>
+								</a>
+								<a href="#" class="social-link">
+									<span class="social-icon"><Icons name="instagram" size={24} color="#6a994e" /></span>
+									<span>Instagram</span>
+								</a>
+								<a href="#" class="social-link">
+									<span class="social-icon"><Icons name="facebook" size={24} color="#6a994e" /></span>
+									<span>Facebook</span>
+								</a>
+								<a href="#" class="social-link">
+									<span class="social-icon"><Icons name="linkedin" size={24} color="#6a994e" /></span>
+									<span>LinkedIn</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="info-card">
+							<h3>アクセス</h3>
+							<p class="access-info">
+								<strong>電車でお越しの場合</strong><br/>
+								JR原宿駅 徒歩5分<br/>
+								東京メトロ明治神宮前駅 徒歩3分
+							</p>
+							<p class="access-info">
+								<strong>車でお越しの場合</strong><br/>
+								専用駐車場はございません。<br/>
+								近隣のコインパーキングをご利用ください。
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<Footer />
+
+		<style>
+			/* Hero Section */
+			.hero {
+				padding: var(--spacing-4xl) 0 var(--spacing-3xl);
+				background: linear-gradient(135deg, rgba(139, 90, 60, 0.05), rgba(106, 153, 78, 0.05));
+			}
+
+			.hero-content {
+				max-width: 800px;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			.badge {
+				display: inline-block;
+				padding: var(--spacing-sm) var(--spacing-lg);
+				background: rgba(106, 153, 78, 0.1);
+				border-radius: var(--radius-full);
+				color: var(--color-secondary);
+				margin-bottom: var(--spacing-lg);
+				font-size: var(--font-size-sm);
+			}
+
+			.hero h1 {
+				font-family: var(--font-display);
+				font-size: clamp(3rem, 7vw, 5rem);
+				font-weight: 300;
+				line-height: 1.2;
+				margin-bottom: var(--spacing-lg);
+				color: var(--color-primary);
+			}
+
+			.hero-subtitle {
+				font-size: var(--font-size-lg);
+				color: var(--color-text-light);
+				line-height: 1.8;
+			}
+
+			/* Contact Section */
+			.contact {
+				padding: var(--spacing-4xl) 0;
+			}
+
+			.contact-layout {
+				display: grid;
+				grid-template-columns: 2fr 1fr;
+				gap: var(--spacing-3xl);
+			}
+
+			/* Contact Form */
+			.contact-form h2 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-3xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-md);
+			}
+
+			.form-description {
+				color: var(--color-text-light);
+				margin-bottom: var(--spacing-xl);
+				line-height: 1.8;
+			}
+
+			.form {
+				background: var(--color-surface);
+				padding: var(--spacing-3xl);
+				border-radius: var(--radius-lg);
+				box-shadow: var(--shadow-sm);
+			}
+
+			.form-group {
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.form-group label {
+				display: block;
+				margin-bottom: var(--spacing-xs);
+				color: var(--color-text);
+				font-weight: 600;
+			}
+
+			.required {
+				color: #e74c3c;
+			}
+
+			.form-group input,
+			.form-group select,
+			.form-group textarea {
+				width: 100%;
+				padding: var(--spacing-md);
+				border: 2px solid rgba(139, 90, 60, 0.2);
+				border-radius: var(--radius-sm);
+				font-family: var(--font-body);
+				font-size: var(--font-size-base);
+				transition: var(--transition-base);
+			}
+
+			.form-group input:focus,
+			.form-group select:focus,
+			.form-group textarea:focus {
+				outline: none;
+				border-color: var(--color-secondary);
+				box-shadow: 0 0 0 3px rgba(106, 153, 78, 0.1);
+			}
+
+			.form-group textarea {
+				resize: vertical;
+				min-height: 150px;
+			}
+
+			/* Contact Info */
+			.contact-info {
+				display: flex;
+				flex-direction: column;
+				gap: var(--spacing-xl);
+			}
+
+			.info-card {
+				background: var(--color-surface);
+				padding: var(--spacing-2xl);
+				border-radius: var(--radius-lg);
+				box-shadow: var(--shadow-sm);
+			}
+
+			.info-card h3 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.info-item {
+				display: flex;
+				gap: var(--spacing-md);
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.info-item:last-child {
+				margin-bottom: 0;
+			}
+
+			.info-icon {
+				font-size: 1.8rem;
+				min-width: 40px;
+			}
+
+			.info-label {
+				font-size: var(--font-size-sm);
+				color: var(--color-text-light);
+				margin-bottom: var(--spacing-xs);
+			}
+
+			.info-value {
+				color: var(--color-text);
+				line-height: 1.6;
+			}
+
+			/* Social Links */
+			.social-links {
+				display: flex;
+				flex-direction: column;
+				gap: var(--spacing-md);
+			}
+
+			.social-link {
+				display: flex;
+				align-items: center;
+				gap: var(--spacing-md);
+				padding: var(--spacing-md);
+				background: var(--color-background);
+				border-radius: var(--radius-sm);
+				text-decoration: none;
+				color: var(--color-text);
+				transition: var(--transition-base);
+			}
+
+			.social-link:hover {
+				background: var(--color-secondary);
+				color: white;
+				transform: translateX(5px);
+			}
+
+			.social-icon {
+				font-size: 1.5rem;
+			}
+
+			/* Access Info */
+			.access-info {
+				color: var(--color-text-light);
+				line-height: 1.8;
+				margin-bottom: var(--spacing-md);
+			}
+
+			.access-info:last-child {
+				margin-bottom: 0;
+			}
+
+			.access-info strong {
+				color: var(--color-text);
+				display: block;
+				margin-bottom: var(--spacing-xs);
+			}
+
+			/* Button */
+			.btn {
+				display: inline-block;
+				padding: var(--spacing-md) var(--spacing-3xl);
+				border-radius: var(--radius-full);
+				text-decoration: none;
+				font-weight: 700;
+				transition: var(--transition-base);
+				border: none;
+				cursor: pointer;
+				font-family: var(--font-body);
+				font-size: var(--font-size-base);
+			}
+
+			.btn-primary {
+				background: var(--color-primary);
+				color: white;
+				width: 100%;
+			}
+
+			.btn-primary:hover {
+				background: var(--color-secondary);
+				transform: translateY(-2px);
+				box-shadow: var(--shadow-md);
+			}
+
+			/* Responsive */
+			@media (max-width: 968px) {
+				.contact-layout {
+					grid-template-columns: 1fr;
+					gap: var(--spacing-2xl);
+				}
+			}
+
+			@media (max-width: 768px) {
+				.hero {
+					padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+				}
+
+				.hero h1 {
+					font-size: clamp(2.5rem, 6vw, 4rem);
+				}
+
+				.hero-subtitle {
+					font-size: var(--font-size-base);
+				}
+
+				.contact {
+					padding: var(--spacing-3xl) 0;
+				}
+
+				.form {
+					padding: var(--spacing-2xl);
+				}
+
+				.info-card {
+					padding: var(--spacing-xl);
+				}
+			}
+
+			@media (max-width: 480px) {
+				.hero {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.contact {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.form {
+					padding: var(--spacing-xl);
+				}
+
+				.info-card {
+					padding: var(--spacing-md);
+				}
+
+				.info-icon {
+					font-size: 1.5rem;
+					min-width: 35px;
+				}
+
+				.social-link {
+					padding: var(--spacing-sm) var(--spacing-md);
+				}
+			}
+		</style>
+
+		<script>
+			// フォーム送信処理
+			const form = document.querySelector('.form') as HTMLFormElement;
+			form.addEventListener('submit', (e) => {
+				e.preventDefault();
+				alert('送信が完了しました。ありがとうございます！\n（※このはデモです。実際には送信されません）');
+				form.reset();
+			});
+		</script>
+	</body>
+</html>

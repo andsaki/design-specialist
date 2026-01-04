@@ -1,0 +1,564 @@
+---
+import Header from '../../organic-site/components/Header.astro';
+import Footer from '../../organic-site/components/Footer.astro';
+import Icons from '../../organic-site/components/Icons.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About - Organic</title>
+		<meta name="description" content="私たちのミッション、ビジョン、チームについて" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href={`${base}organic-site/styles/tokens.css`} />
+	</head>
+	<body>
+		<Header />
+
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<div class="badge">About Us</div>
+					<h1>
+						自然と共に歩む<br/>
+						デザインの旅
+					</h1>
+					<p class="hero-subtitle">
+						私たちは、デザインを通じて自然と人間の調和を追求し、<br/>
+						持続可能な未来を創造することを使命としています。
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Mission & Vision -->
+		<section class="mission">
+			<div class="container">
+				<div class="mission-grid">
+					<div class="mission-card">
+						<div class="mission-icon"><Icons name="globe" size={80} color="#6a994e" /></div>
+						<h2>Mission</h2>
+						<h3>私たちの使命</h3>
+						<p>
+							自然と調和するデザインを通じて、環境に優しく、人々の心に響く体験を創造すること。
+							デザインの力で、より持続可能で美しい世界を実現します。
+						</p>
+					</div>
+
+					<div class="mission-card">
+						<div class="mission-icon"><Icons name="sprout" size={80} color="#6a994e" /></div>
+						<h2>Vision</h2>
+						<h3>目指す未来</h3>
+						<p>
+							すべてのデザインが自然との共生を前提とし、次世代に美しい地球を残せる社会。
+							オーガニックな思想が標準となる、新しいデザインの在り方を提案します。
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Story Section -->
+		<section class="story">
+			<div class="container">
+				<div class="story-content">
+					<div class="story-text">
+						<h2>私たちの物語</h2>
+						<p class="lead">
+							2020年、小さなデザインスタジオから始まった私たちの挑戦。
+						</p>
+						<p>
+							当時、多くのデザインは「見た目の美しさ」だけを追求していました。
+							しかし私たちは疑問を抱きました。本当にそれだけで良いのだろうか？
+						</p>
+						<p>
+							美しいだけではなく、環境に優しく、長く愛され続けるデザイン。
+							そんなデザインを追求する中で、私たちは「自然」に答えを見出しました。
+						</p>
+						<p>
+							自然界には、何億年もかけて最適化された美しいデザインが溢れています。
+							葉脈のパターン、波の形、木の年輪。それらはすべて、機能と美が完璧に調和した究極のデザインです。
+						</p>
+						<p>
+							私たちは自然から学び、その原則をデジタルの世界に応用することで、
+							新しいデザインの可能性を探求し続けています。
+						</p>
+					</div>
+					<div class="story-visual">
+						<div class="timeline">
+							<div class="timeline-item">
+								<div class="year">2020</div>
+								<div class="event">スタジオ設立</div>
+							</div>
+							<div class="timeline-item">
+								<div class="year">2021</div>
+								<div class="event">初のエコデザイン賞受賞</div>
+							</div>
+							<div class="timeline-item">
+								<div class="year">2023</div>
+								<div class="event">国際展開開始</div>
+							</div>
+							<div class="timeline-item">
+								<div class="year">2024</div>
+								<div class="event">カーボンニュートラル達成</div>
+							</div>
+							<div class="timeline-item">
+								<div class="year">2026</div>
+								<div class="event">現在、100社以上との協業</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Values Section -->
+		<section class="values">
+			<div class="container">
+				<div class="section-header">
+					<h2>私たちの価値観</h2>
+					<p>デザインのすべての判断基準となる、3つのコアバリュー</p>
+				</div>
+
+				<div class="values-grid">
+					<div class="value-card">
+						<div class="value-number">01</div>
+						<h3>持続可能性</h3>
+						<p>
+							すべてのプロジェクトで環境への影響を最小限に抑え、
+							長期的な視点で価値を生み出すことを重視します。
+						</p>
+					</div>
+
+					<div class="value-card">
+						<div class="value-number">02</div>
+						<h3>人間中心</h3>
+						<p>
+							テクノロジーではなく、人間の感情や体験を中心に据えたデザイン。
+							使う人の心に寄り添うことを大切にします。
+						</p>
+					</div>
+
+					<div class="value-card">
+						<div class="value-number">03</div>
+						<h3>誠実さ</h3>
+						<p>
+							見せかけの美しさではなく、本質的な価値を追求。
+							透明性と誠実さを持って、クライアントと向き合います。
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Team Section -->
+		<section class="team">
+			<div class="container">
+				<div class="section-header">
+					<h2>チーム</h2>
+					<p>情熱を持ったクリエイターたち</p>
+				</div>
+
+				<div class="team-grid">
+					<div class="team-member">
+						<div class="member-avatar"><Icons name="user" size={64} color="#6a994e" /></div>
+						<h3>田中 太郎</h3>
+						<div class="member-role">創業者 / クリエイティブディレクター</div>
+						<p>
+							15年以上のデザイン経験を持ち、サステナブルデザインのパイオニア。
+						</p>
+					</div>
+
+					<div class="team-member">
+						<div class="member-avatar"><Icons name="user" size={64} color="#6a994e" /></div>
+						<h3>佐藤 花子</h3>
+						<div class="member-role">UXデザイナー</div>
+						<p>
+							人間の行動心理学に基づいたUXデザインを得意とする。
+						</p>
+					</div>
+
+					<div class="team-member">
+						<div class="member-avatar"><Icons name="user" size={64} color="#6a994e" /></div>
+						<h3>鈴木 一郎</h3>
+						<div class="member-role">ビジネスストラテジスト</div>
+						<p>
+							デザインとビジネスの架け橋として、戦略立案を担当。
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<Footer />
+
+		<style>
+			/* Hero Section */
+			.hero {
+				padding: var(--spacing-4xl) 0 var(--spacing-3xl);
+				background: linear-gradient(135deg, rgba(139, 90, 60, 0.05), rgba(106, 153, 78, 0.05));
+			}
+
+			.hero-content {
+				max-width: 800px;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			.badge {
+				display: inline-block;
+				padding: var(--spacing-sm) var(--spacing-lg);
+				background: rgba(106, 153, 78, 0.1);
+				border-radius: var(--radius-full);
+				color: var(--color-secondary);
+				margin-bottom: var(--spacing-lg);
+				font-size: var(--font-size-sm);
+			}
+
+			.hero h1 {
+				font-family: var(--font-display);
+				font-size: clamp(3rem, 7vw, 5rem);
+				font-weight: 300;
+				line-height: 1.2;
+				margin-bottom: var(--spacing-lg);
+				color: var(--color-primary);
+			}
+
+			.hero-subtitle {
+				font-size: var(--font-size-lg);
+				color: var(--color-text-light);
+				line-height: 1.8;
+			}
+
+			/* Mission Section */
+			.mission {
+				padding: var(--spacing-4xl) 0;
+			}
+
+			.mission-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: var(--spacing-3xl);
+			}
+
+			.mission-card {
+				background: var(--color-surface);
+				padding: var(--spacing-3xl);
+				border-radius: var(--radius-lg);
+				box-shadow: var(--shadow-md);
+			}
+
+			.mission-icon {
+				font-size: 5rem;
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.mission-card h2 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-sm);
+				color: var(--color-secondary);
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				margin-bottom: var(--spacing-sm);
+			}
+
+			.mission-card h3 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-3xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.mission-card p {
+				color: var(--color-text-light);
+				line-height: 1.8;
+				font-size: var(--font-size-lg);
+			}
+
+			/* Story Section */
+			.story {
+				padding: var(--spacing-4xl) 0;
+				background: var(--color-surface);
+			}
+
+			.story-content {
+				display: grid;
+				grid-template-columns: 2fr 1fr;
+				gap: var(--spacing-3xl);
+			}
+
+			.story-text h2 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-4xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.lead {
+				font-size: var(--font-size-xl);
+				font-weight: 700;
+				color: var(--color-secondary);
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.story-text p {
+				margin-bottom: var(--spacing-lg);
+				line-height: 1.8;
+				color: var(--color-text);
+			}
+
+			.timeline {
+				display: flex;
+				flex-direction: column;
+				gap: var(--spacing-xl);
+			}
+
+			.timeline-item {
+				padding: var(--spacing-lg);
+				background: var(--color-background);
+				border-left: 4px solid var(--color-secondary);
+				border-radius: var(--radius-sm);
+			}
+
+			.year {
+				font-family: var(--font-display);
+				font-size: var(--font-size-2xl);
+				font-weight: 700;
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-xs);
+			}
+
+			.event {
+				color: var(--color-text);
+				font-weight: 600;
+			}
+
+			/* Values Section */
+			.values {
+				padding: var(--spacing-4xl) 0;
+			}
+
+			.section-header {
+				text-align: center;
+				margin-bottom: var(--spacing-3xl);
+			}
+
+			.section-header h2 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-4xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-md);
+			}
+
+			.section-header p {
+				font-size: var(--font-size-lg);
+				color: var(--color-text-light);
+			}
+
+			.values-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: var(--spacing-xl);
+			}
+
+			.value-card {
+				background: var(--color-surface);
+				padding: var(--spacing-3xl) var(--spacing-lg);
+				border-radius: var(--radius-lg);
+				box-shadow: var(--shadow-sm);
+				transition: var(--transition-base);
+			}
+
+			.value-card:hover {
+				transform: translateY(-10px);
+				box-shadow: var(--shadow-lg);
+			}
+
+			.value-number {
+				font-family: var(--font-display);
+				font-size: 4rem;
+				font-weight: 700;
+				color: rgba(139, 90, 60, 0.15);
+				line-height: 1;
+				margin-bottom: var(--spacing-md);
+			}
+
+			.value-card h3 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-2xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-md);
+			}
+
+			.value-card p {
+				color: var(--color-text-light);
+				line-height: 1.8;
+			}
+
+			/* Team Section */
+			.team {
+				padding: var(--spacing-4xl) 0;
+				background: var(--color-surface);
+			}
+
+			.team-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: var(--spacing-xl);
+			}
+
+			.team-member {
+				background: var(--color-background);
+				padding: var(--spacing-3xl) var(--spacing-lg);
+				border-radius: var(--radius-lg);
+				text-align: center;
+				box-shadow: var(--shadow-sm);
+				transition: var(--transition-base);
+			}
+
+			.team-member:hover {
+				transform: translateY(-10px);
+				box-shadow: var(--shadow-md);
+			}
+
+			.member-avatar {
+				width: 120px;
+				height: 120px;
+				margin: 0 auto var(--spacing-lg);
+				background: rgba(106, 153, 78, 0.1);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 4rem;
+			}
+
+			.team-member h3 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-xs);
+			}
+
+			.member-role {
+				color: var(--color-secondary);
+				font-weight: 600;
+				margin-bottom: var(--spacing-md);
+			}
+
+			.team-member p {
+				color: var(--color-text-light);
+				line-height: 1.6;
+			}
+
+			/* Responsive */
+			@media (max-width: 968px) {
+				.mission-grid {
+					grid-template-columns: 1fr;
+					gap: var(--spacing-xl);
+				}
+
+				.story-content {
+					grid-template-columns: 1fr;
+				}
+
+				.values-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.team-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			@media (max-width: 768px) {
+				.hero {
+					padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+				}
+
+				.hero h1 {
+					font-size: clamp(2.5rem, 6vw, 4rem);
+				}
+
+				.hero-subtitle {
+					font-size: var(--font-size-base);
+				}
+
+				.mission {
+					padding: var(--spacing-3xl) 0;
+				}
+
+				.mission-card {
+					padding: var(--spacing-2xl);
+				}
+
+				.story {
+					padding: var(--spacing-3xl) 0;
+				}
+
+				.values {
+					padding: var(--spacing-3xl) 0;
+				}
+
+				.team {
+					padding: var(--spacing-3xl) 0;
+				}
+
+				.section-header h2 {
+					font-size: var(--font-size-3xl);
+				}
+			}
+
+			@media (max-width: 480px) {
+				.hero {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.mission {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.mission-card {
+					padding: var(--spacing-xl);
+				}
+
+				.mission-icon {
+					font-size: 3.5rem;
+				}
+
+				.story {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.values {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.value-card {
+					padding: var(--spacing-2xl) var(--spacing-md);
+				}
+
+				.team {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.team-member {
+					padding: var(--spacing-2xl) var(--spacing-md);
+				}
+
+				.member-avatar {
+					width: 100px;
+					height: 100px;
+					font-size: 3rem;
+				}
+			}
+		</style>
+	</body>
+</html>

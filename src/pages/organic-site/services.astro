@@ -1,0 +1,624 @@
+---
+import Header from '../../organic-site/components/Header.astro';
+import Footer from '../../organic-site/components/Footer.astro';
+import Icons from '../../organic-site/components/Icons.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Services - Organic</title>
+		<meta name="description" content="オーガニックデザインの各種サービス" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href={`${base}organic-site/styles/tokens.css`} />
+	</head>
+	<body>
+		<Header />
+
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<div class="badge">Services</div>
+					<h1>
+						あなたのビジョンを<br/>
+						持続可能な形に
+					</h1>
+					<p class="hero-subtitle">
+						デザインコンサルティングから実装まで、<br/>
+						包括的なサービスでサポートします
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Grid -->
+		<section class="services">
+			<div class="container">
+				<div class="services-grid">
+					<div class="service-card">
+						<div class="service-icon"><Icons name="palette" size={64} color="#6a994e" /></div>
+						<h2>ブランドデザイン</h2>
+						<p>
+							企業やプロダクトの本質を捉え、自然と調和するブランドアイデンティティを構築します。
+							ロゴ、カラーパレット、タイポグラフィなど、一貫性のあるブランド体験を提供。
+						</p>
+						<ul class="service-features">
+							<li>ブランド戦略策定</li>
+							<li>ロゴ・VI開発</li>
+							<li>ブランドガイドライン作成</li>
+							<li>ブランドアイデンティティデザイン</li>
+						</ul>
+					</div>
+
+					<div class="service-card">
+						<div class="service-icon"><Icons name="monitor" size={64} color="#6a994e" /></div>
+						<h2>Webデザイン・開発</h2>
+						<p>
+							レスポンシブでアクセシブル、そして環境に配慮したWebサイトを制作します。
+							美しさと機能性を兼ね備えた、長く愛されるサイトをお届けします。
+						</p>
+						<ul class="service-features">
+							<li>Webサイト設計・デザイン</li>
+							<li>フロントエンド開発</li>
+							<li>CMS構築</li>
+							<li>パフォーマンス最適化</li>
+						</ul>
+					</div>
+
+					<div class="service-card">
+						<div class="service-icon"><Icons name="smartphone" size={64} color="#6a994e" /></div>
+						<h2>UIUXデザイン</h2>
+						<p>
+							ユーザー中心のアプローチで、直感的で使いやすいインターフェースをデザインします。
+							人間の自然な行動に寄り添った体験設計を行います。
+						</p>
+						<ul class="service-features">
+							<li>ユーザーリサーチ</li>
+							<li>情報設計</li>
+							<li>プロトタイピング</li>
+							<li>ユーザビリティテスト</li>
+						</ul>
+					</div>
+
+					<div class="service-card">
+						<div class="service-icon"><Icons name="leaf" size={64} color="#6a994e" /></div>
+						<h2>サステナブルコンサルティング</h2>
+						<p>
+							企業のサステナビリティ戦略を、デザインの視点からサポートします。
+							環境負荷を減らしながら、ビジネスの成長を実現する方法を提案します。
+						</p>
+						<ul class="service-features">
+							<li>環境影響評価</li>
+							<li>サステナブル戦略立案</li>
+							<li>エコデザインガイドライン</li>
+							<li>グリーンマーケティング支援</li>
+						</ul>
+					</div>
+
+					<div class="service-card">
+						<div class="service-icon"><Icons name="package" size={64} color="#6a994e" /></div>
+						<h2>プロダクトデザイン</h2>
+						<p>
+							物理的なプロダクトからデジタルサービスまで、一貫した体験設計を行います。
+							自然素材の活用や、循環型設計など、環境を考慮したデザインを実現します。
+						</p>
+						<ul class="service-features">
+							<li>コンセプト開発</li>
+							<li>プロトタイプ制作</li>
+							<li>パッケージデザイン</li>
+							<li>素材選定・調達支援</li>
+						</ul>
+					</div>
+
+					<div class="service-card">
+						<div class="service-icon"><Icons name="book-open" size={64} color="#6a994e" /></div>
+						<h2>デザイン教育・ワークショップ</h2>
+						<p>
+							企業向けのデザイン研修やワークショップを提供します。
+							サステナブルデザインの考え方を組織全体に浸透させるお手伝いをします。
+						</p>
+						<ul class="service-features">
+							<li>デザイン思考ワークショップ</li>
+							<li>サステナビリティ研修</li>
+							<li>チームビルディング</li>
+							<li>デザインレビュー</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Process Section -->
+		<section class="process">
+			<div class="container">
+				<div class="section-header">
+					<h2>プロジェクトの流れ</h2>
+					<p>一貫したプロセスで、確実に成果を導きます</p>
+				</div>
+
+				<div class="process-steps">
+					<div class="step">
+						<div class="step-number">01</div>
+						<h3>ヒアリング</h3>
+						<p>
+							お客様のビジョンや課題を深く理解するため、綿密なヒアリングを行います。
+						</p>
+					</div>
+
+					<div class="step">
+						<div class="step-number">02</div>
+						<h3>リサーチ・分析</h3>
+						<p>
+							市場調査、競合分析、ユーザーリサーチを通じて、最適な戦略を立案します。
+						</p>
+					</div>
+
+					<div class="step">
+						<div class="step-number">03</div>
+						<h3>コンセプト開発</h3>
+						<p>
+							リサーチ結果を基に、独自性のあるコンセプトを複数提案します。
+						</p>
+					</div>
+
+					<div class="step">
+						<div class="step-number">04</div>
+						<h3>デザイン制作</h3>
+						<p>
+							確定したコンセプトをもとに、細部まで丁寧にデザインを仕上げます。
+						</p>
+					</div>
+
+					<div class="step">
+						<div class="step-number">05</div>
+						<h3>実装・納品</h3>
+						<p>
+							デザインを形にし、納品。必要に応じて運用サポートも提供します。
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Pricing Section -->
+		<section class="pricing">
+			<div class="container">
+				<div class="section-header">
+					<h2>料金プラン</h2>
+					<p>プロジェクトの規模に合わせて、柔軟にご対応します</p>
+				</div>
+
+				<div class="pricing-grid">
+					<div class="pricing-card">
+						<div class="plan-name">スタータープラン</div>
+						<div class="plan-price">¥300,000<span>〜</span></div>
+						<p class="plan-description">
+							小規模プロジェクトや、初めてのお客様におすすめ
+						</p>
+						<ul class="plan-features">
+							<li>初回コンサルティング</li>
+							<li>基本デザイン制作</li>
+							<li>2回の修正</li>
+							<li>納品後1ヶ月サポート</li>
+						</ul>
+						<a href={`${base}organic-site/contact`} class="btn btn-outline">相談する</a>
+					</div>
+
+					<div class="pricing-card featured">
+						<div class="popular-badge">人気</div>
+						<div class="plan-name">スタンダードプラン</div>
+						<div class="plan-price">¥800,000<span>〜</span></div>
+						<p class="plan-description">
+							中規模プロジェクト向けの充実したプラン
+						</p>
+						<ul class="plan-features">
+							<li>包括的なリサーチ</li>
+							<li>フルデザイン制作</li>
+							<li>5回の修正</li>
+							<li>実装サポート</li>
+							<li>納品後3ヶ月サポート</li>
+						</ul>
+						<a href={`${base}organic-site/contact`} class="btn btn-primary">相談する</a>
+					</div>
+
+					<div class="pricing-card">
+						<div class="plan-name">エンタープライズプラン</div>
+						<div class="plan-price">要相談</div>
+						<p class="plan-description">
+							大規模プロジェクトや長期パートナーシップ向け
+						</p>
+						<ul class="plan-features">
+							<li>完全カスタマイズ</li>
+							<li>専任チーム編成</li>
+							<li>無制限の修正</li>
+							<li>フルサポート</li>
+							<li>継続的な改善提案</li>
+						</ul>
+						<a href={`${base}organic-site/contact`} class="btn btn-outline">相談する</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<Footer />
+
+		<style>
+			/* Hero Section */
+			.hero {
+				padding: var(--spacing-4xl) 0 var(--spacing-3xl);
+				background: linear-gradient(135deg, rgba(139, 90, 60, 0.05), rgba(106, 153, 78, 0.05));
+			}
+
+			.hero-content {
+				max-width: 800px;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			.badge {
+				display: inline-block;
+				padding: var(--spacing-sm) var(--spacing-lg);
+				background: rgba(106, 153, 78, 0.1);
+				border-radius: var(--radius-full);
+				color: var(--color-secondary);
+				margin-bottom: var(--spacing-lg);
+				font-size: var(--font-size-sm);
+			}
+
+			.hero h1 {
+				font-family: var(--font-display);
+				font-size: clamp(3rem, 7vw, 5rem);
+				font-weight: 300;
+				line-height: 1.2;
+				margin-bottom: var(--spacing-lg);
+				color: var(--color-primary);
+			}
+
+			.hero-subtitle {
+				font-size: var(--font-size-lg);
+				color: var(--color-text-light);
+				line-height: 1.8;
+			}
+
+			/* Services Section */
+			.services {
+				padding: var(--spacing-4xl) 0;
+			}
+
+			.services-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: var(--spacing-xl);
+			}
+
+			.service-card {
+				background: var(--color-surface);
+				padding: var(--spacing-3xl);
+				border-radius: var(--radius-lg);
+				box-shadow: var(--shadow-sm);
+				transition: var(--transition-base);
+			}
+
+			.service-card:hover {
+				transform: translateY(-10px);
+				box-shadow: var(--shadow-lg);
+			}
+
+			.service-icon {
+				font-size: 4rem;
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.service-card h2 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-2xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-md);
+			}
+
+			.service-card > p {
+				color: var(--color-text-light);
+				line-height: 1.8;
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.service-features {
+				list-style: none;
+			}
+
+			.service-features li {
+				padding: var(--spacing-sm) 0;
+				color: var(--color-text);
+				position: relative;
+				padding-left: var(--spacing-lg);
+			}
+
+			.service-features li::before {
+				content: '✓';
+				position: absolute;
+				left: 0;
+				color: var(--color-secondary);
+				font-weight: 700;
+			}
+
+			/* Process Section */
+			.process {
+				padding: var(--spacing-4xl) 0;
+				background: var(--color-surface);
+			}
+
+			.section-header {
+				text-align: center;
+				margin-bottom: var(--spacing-3xl);
+			}
+
+			.section-header h2 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-4xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-md);
+			}
+
+			.section-header p {
+				font-size: var(--font-size-lg);
+				color: var(--color-text-light);
+			}
+
+			.process-steps {
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+				gap: var(--spacing-lg);
+			}
+
+			.step {
+				text-align: center;
+			}
+
+			.step-number {
+				width: 80px;
+				height: 80px;
+				margin: 0 auto var(--spacing-lg);
+				background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+				color: white;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: var(--font-display);
+				font-size: var(--font-size-2xl);
+				font-weight: 700;
+			}
+
+			.step h3 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-lg);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-sm);
+			}
+
+			.step p {
+				color: var(--color-text-light);
+				line-height: 1.6;
+				font-size: var(--font-size-sm);
+			}
+
+			/* Pricing Section */
+			.pricing {
+				padding: var(--spacing-4xl) 0;
+			}
+
+			.pricing-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: var(--spacing-xl);
+			}
+
+			.pricing-card {
+				background: var(--color-surface);
+				padding: var(--spacing-3xl);
+				border-radius: var(--radius-lg);
+				box-shadow: var(--shadow-sm);
+				text-align: center;
+				position: relative;
+				transition: var(--transition-base);
+			}
+
+			.pricing-card:hover {
+				transform: translateY(-10px);
+				box-shadow: var(--shadow-lg);
+			}
+
+			.pricing-card.featured {
+				background: linear-gradient(135deg, rgba(139, 90, 60, 0.05), rgba(106, 153, 78, 0.05));
+				border: 2px solid var(--color-secondary);
+			}
+
+			.popular-badge {
+				position: absolute;
+				top: -15px;
+				left: 50%;
+				transform: translateX(-50%);
+				background: var(--color-secondary);
+				color: white;
+				padding: var(--spacing-xs) var(--spacing-lg);
+				border-radius: var(--radius-full);
+				font-size: var(--font-size-sm);
+				font-weight: 700;
+			}
+
+			.plan-name {
+				font-family: var(--font-display);
+				font-size: var(--font-size-xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.plan-price {
+				font-family: var(--font-display);
+				font-size: var(--font-size-4xl);
+				font-weight: 700;
+				color: var(--color-secondary);
+				margin-bottom: var(--spacing-lg);
+			}
+
+			.plan-price span {
+				font-size: var(--font-size-lg);
+				font-weight: 400;
+			}
+
+			.plan-description {
+				color: var(--color-text-light);
+				margin-bottom: var(--spacing-xl);
+				line-height: 1.6;
+			}
+
+			.plan-features {
+				list-style: none;
+				margin-bottom: var(--spacing-xl);
+				text-align: left;
+			}
+
+			.plan-features li {
+				padding: var(--spacing-sm) 0;
+				color: var(--color-text);
+				position: relative;
+				padding-left: var(--spacing-lg);
+			}
+
+			.plan-features li::before {
+				content: '✓';
+				position: absolute;
+				left: 0;
+				color: var(--color-secondary);
+				font-weight: 700;
+			}
+
+			/* Buttons */
+			.btn {
+				display: inline-block;
+				padding: var(--spacing-md) var(--spacing-xl);
+				border-radius: var(--radius-full);
+				text-decoration: none;
+				font-weight: 700;
+				transition: var(--transition-base);
+			}
+
+			.btn-primary {
+				background: var(--color-primary);
+				color: white;
+			}
+
+			.btn-primary:hover {
+				background: var(--color-secondary);
+				transform: translateY(-2px);
+			}
+
+			.btn-outline {
+				background: transparent;
+				color: var(--color-secondary);
+				border: 2px solid var(--color-secondary);
+			}
+
+			.btn-outline:hover {
+				background: var(--color-secondary);
+				color: white;
+			}
+
+			/* Responsive */
+			@media (max-width: 968px) {
+				.services-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.process-steps {
+					grid-template-columns: 1fr;
+				}
+
+				.pricing-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			@media (max-width: 768px) {
+				.hero {
+					padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+				}
+
+				.hero h1 {
+					font-size: clamp(2.5rem, 6vw, 4rem);
+				}
+
+				.hero-subtitle {
+					font-size: var(--font-size-base);
+				}
+
+				.services {
+					padding: var(--spacing-3xl) 0;
+				}
+
+				.service-card {
+					padding: var(--spacing-2xl);
+				}
+
+				.process {
+					padding: var(--spacing-3xl) 0;
+				}
+
+				.pricing {
+					padding: var(--spacing-3xl) 0;
+				}
+
+				.pricing-card {
+					padding: var(--spacing-2xl);
+				}
+
+				.section-header h2 {
+					font-size: var(--font-size-3xl);
+				}
+			}
+
+			@media (max-width: 480px) {
+				.hero {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.services {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.service-card {
+					padding: var(--spacing-xl);
+				}
+
+				.service-icon {
+					font-size: 3rem;
+				}
+
+				.process {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.step-number {
+					width: 60px;
+					height: 60px;
+					font-size: var(--font-size-xl);
+				}
+
+				.pricing {
+					padding: var(--spacing-2xl) 0;
+				}
+
+				.pricing-card {
+					padding: var(--spacing-xl);
+				}
+			}
+		</style>
+	</body>
+</html>
