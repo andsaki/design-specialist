@@ -83,5 +83,47 @@ export const patterns: DesignPattern[] = [
 		},
 		font: 'Organic Sans',
 		tags: ['✅ 独自性', 'アースカラー', '曲線的']
+	},
+	{
+		id: 'art-deco',
+		title: 'Art Deco / Geometric',
+		subtitle: 'アールデコ・幾何学的',
+		description: '1920年代の豪華さと幾何学的な精密さ。ゴールドアクセント、シンメトリー、エレガントな装飾。',
+		tone: '豪華・幾何学的',
+		colors: {
+			primary: '#1a1a1a',
+			secondary: '#d4af37',
+			accent: '#f5f5dc'
+		},
+		font: 'Playfair Display',
+		tags: ['✅ 独自性', 'ゴールド', '幾何学模様']
+	},
+	{
+		id: 'soft-pastel',
+		title: 'Soft Pastel',
+		subtitle: '柔らかい・パステル調',
+		description: '夢見るようなパステルカラー、柔らかいグラデーション、透明感のあるグラスモーフィズム。',
+		tone: '柔らかい・夢見るような',
+		colors: {
+			primary: '#ffc8dd',
+			secondary: '#bde0fe',
+			accent: '#cdb4db'
+		},
+		font: 'Quicksand',
+		tags: ['✅ 独自性', 'パステル', 'グラスモーフィズム']
+	},
+	{
+		id: 'maximalist',
+		title: 'Maximalist Chaos',
+		subtitle: '最大主義・混沌',
+		description: '大胆な色の衝突、多層的なビジュアル要素、情報密度の高いレイアウト。意図的な視覚的飽和。',
+		tone: '最大主義・カオス',
+		colors: {
+			primary: '#ff006e',
+			secondary: '#ffbe0b',
+			accent: '#3a86ff'
+		},
+		font: 'Mixed Display Fonts',
+		tags: ['✅ 独自性', '大胆な色', '高密度']
 	}
 ];

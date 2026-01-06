@@ -1,0 +1,528 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Art Deco - Elegance & Geometry</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!-- Geometric Background -->
+		<div class="background-pattern"></div>
+
+		<!-- Header -->
+		<header>
+			<nav>
+				<div class="nav-divider"></div>
+				<a href={base} class="back-link">← Back to Gallery</a>
+				<div class="nav-divider"></div>
+			</nav>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="hero-ornament top"></div>
+			<div class="container">
+				<div class="hero-badge">EST. 1925</div>
+				<h1>
+					<span class="title-line">ELEGANCE</span>
+					<span class="title-divider">◆</span>
+					<span class="title-line">GEOMETRY</span>
+				</h1>
+				<p class="tagline">The Golden Age of Design</p>
+				<div class="geometric-frame">
+					<p class="hero-description">
+						Where luxury meets precision. Experience the timeless sophistication
+						of the Art Deco movement, where every line tells a story of opulence.
+					</p>
+				</div>
+			</div>
+			<div class="hero-ornament bottom"></div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="features">
+			<div class="container">
+				<div class="section-header">
+					<div class="header-divider"></div>
+					<h2>DISTINCTIVE FEATURES</h2>
+					<div class="header-divider"></div>
+				</div>
+
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="card-corner tl"></div>
+						<div class="card-corner tr"></div>
+						<div class="feature-icon">◇</div>
+						<h3>Geometric Precision</h3>
+						<p>
+							Symmetrical patterns and mathematical perfection.
+							Every angle calculated, every line deliberate.
+						</p>
+						<div class="card-corner bl"></div>
+						<div class="card-corner br"></div>
+					</div>
+
+					<div class="feature-card featured">
+						<div class="card-corner tl"></div>
+						<div class="card-corner tr"></div>
+						<div class="feature-icon">✦</div>
+						<h3>Luxurious Materials</h3>
+						<p>
+							Gold accents, rich blacks, and creamy tones.
+							A palette that speaks of wealth and refinement.
+						</p>
+						<div class="card-corner bl"></div>
+						<div class="card-corner br"></div>
+					</div>
+
+					<div class="feature-card">
+						<div class="card-corner tl"></div>
+						<div class="card-corner tr"></div>
+						<div class="feature-icon">◆</div>
+						<h3>Timeless Elegance</h3>
+						<p>
+							A century-old aesthetic that remains contemporary.
+							Classic sophistication that never fades.
+						</p>
+						<div class="card-corner bl"></div>
+						<div class="card-corner br"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="cta">
+			<div class="cta-border top"></div>
+			<div class="container">
+				<div class="cta-content">
+					<h2>EXPERIENCE LUXURY</h2>
+					<p>Step into an era where design was an art form</p>
+					<button class="cta-button">
+						<span>DISCOVER MORE</span>
+						<div class="button-ornament"></div>
+					</button>
+				</div>
+			</div>
+			<div class="cta-border bottom"></div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<div class="footer-divider"></div>
+			<p>ART DECO DESIGN PATTERN • 2025</p>
+			<div class="footer-divider"></div>
+		</footer>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+				--gold: #d4af37;
+				--dark: #1a1a1a;
+				--cream: #f5f5dc;
+				--gold-dark: #b8941f;
+			}
+
+			body {
+				font-family: 'Cormorant Garamond', serif;
+				background: var(--dark);
+				color: var(--cream);
+				line-height: 1.6;
+				position: relative;
+				overflow-x: hidden;
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
+
+			/* Geometric Background */
+			.background-pattern {
+				position: fixed;
+				inset: 0;
+				opacity: 0.05;
+				background-image:
+					repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 1px, transparent 40px),
+					repeating-linear-gradient(-45deg, var(--gold) 0, var(--gold) 1px, transparent 1px, transparent 40px);
+				z-index: -1;
+			}
+
+			/* Header */
+			header {
+				padding: 2rem 0;
+			}
+
+			nav {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2rem;
+				display: flex;
+				align-items: center;
+				gap: 2rem;
+			}
+
+			.nav-divider {
+				flex: 1;
+				height: 2px;
+				background: linear-gradient(90deg, transparent, var(--gold), transparent);
+			}
+
+			.back-link {
+				color: var(--gold);
+				text-decoration: none;
+				font-size: 0.9rem;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				transition: all 0.3s;
+				white-space: nowrap;
+			}
+
+			.back-link:hover {
+				color: var(--cream);
+			}
+
+			/* Hero Section */
+			.hero {
+				padding: 6rem 0;
+				text-align: center;
+				position: relative;
+			}
+
+			.hero-ornament {
+				width: 200px;
+				height: 40px;
+				margin: 0 auto 3rem;
+				background:
+					linear-gradient(45deg, transparent 30%, var(--gold) 30%, var(--gold) 70%, transparent 70%),
+					linear-gradient(-45deg, transparent 30%, var(--gold) 30%, var(--gold) 70%, transparent 70%);
+				background-size: 20px 20px;
+				background-position: 0 0, 10px 0;
+			}
+
+			.hero-ornament.bottom {
+				margin: 3rem auto 0;
+			}
+
+			.hero-badge {
+				display: inline-block;
+				padding: 0.5rem 2rem;
+				border: 2px solid var(--gold);
+				color: var(--gold);
+				font-size: 0.8rem;
+				letter-spacing: 3px;
+				margin-bottom: 2rem;
+			}
+
+			h1 {
+				font-family: 'Playfair Display', serif;
+				font-size: clamp(3rem, 10vw, 7rem);
+				font-weight: 900;
+				margin-bottom: 1rem;
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+			}
+
+			.title-line {
+				background: linear-gradient(180deg, var(--cream) 0%, var(--gold) 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				letter-spacing: 0.3rem;
+			}
+
+			.title-divider {
+				color: var(--gold);
+				font-size: 2rem;
+			}
+
+			.tagline {
+				font-size: 1.5rem;
+				color: var(--gold);
+				font-style: italic;
+				margin-bottom: 3rem;
+				letter-spacing: 0.2rem;
+			}
+
+			.geometric-frame {
+				max-width: 700px;
+				margin: 0 auto;
+				padding: 3rem;
+				position: relative;
+				border: 3px solid var(--gold);
+				border-image: linear-gradient(45deg, var(--gold-dark), var(--gold), var(--gold-dark)) 1;
+			}
+
+			.geometric-frame::before,
+			.geometric-frame::after {
+				content: '';
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				border: 2px solid var(--gold);
+			}
+
+			.geometric-frame::before {
+				top: -10px;
+				left: -10px;
+				border-right: none;
+				border-bottom: none;
+			}
+
+			.geometric-frame::after {
+				bottom: -10px;
+				right: -10px;
+				border-left: none;
+				border-top: none;
+			}
+
+			.hero-description {
+				font-size: 1.2rem;
+				line-height: 2;
+				color: var(--cream);
+			}
+
+			/* Features Section */
+			.features {
+				padding: 6rem 0;
+			}
+
+			.section-header {
+				display: flex;
+				align-items: center;
+				gap: 2rem;
+				margin-bottom: 4rem;
+			}
+
+			.header-divider {
+				flex: 1;
+				height: 1px;
+				background: var(--gold);
+			}
+
+			.section-header h2 {
+				font-family: 'Playfair Display', serif;
+				font-size: 2.5rem;
+				color: var(--gold);
+				letter-spacing: 0.3rem;
+				white-space: nowrap;
+			}
+
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+				gap: 3rem;
+			}
+
+			.feature-card {
+				padding: 3rem 2rem;
+				background: rgba(212, 175, 55, 0.05);
+				position: relative;
+				text-align: center;
+				transition: all 0.4s;
+			}
+
+			.feature-card.featured {
+				background: rgba(212, 175, 55, 0.1);
+				border: 2px solid var(--gold);
+			}
+
+			.feature-card:hover {
+				background: rgba(212, 175, 55, 0.15);
+				transform: translateY(-10px);
+			}
+
+			.card-corner {
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				border: 2px solid var(--gold);
+			}
+
+			.card-corner.tl { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+			.card-corner.tr { top: -2px; right: -2px; border-left: none; border-bottom: none; }
+			.card-corner.bl { bottom: -2px; left: -2px; border-right: none; border-top: none; }
+			.card-corner.br { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+
+			.feature-icon {
+				font-size: 4rem;
+				color: var(--gold);
+				margin-bottom: 1.5rem;
+			}
+
+			.feature-card h3 {
+				font-family: 'Playfair Display', serif;
+				font-size: 1.8rem;
+				color: var(--cream);
+				margin-bottom: 1rem;
+				letter-spacing: 0.1rem;
+			}
+
+			.feature-card p {
+				color: rgba(245, 245, 220, 0.8);
+				line-height: 1.8;
+			}
+
+			/* CTA Section */
+			.cta {
+				padding: 6rem 0;
+				position: relative;
+			}
+
+			.cta-border {
+				height: 3px;
+				background: linear-gradient(90deg, transparent, var(--gold), transparent);
+				margin-bottom: 4rem;
+			}
+
+			.cta-border.bottom {
+				margin-top: 4rem;
+				margin-bottom: 0;
+			}
+
+			.cta-content {
+				text-align: center;
+			}
+
+			.cta h2 {
+				font-family: 'Playfair Display', serif;
+				font-size: clamp(2.5rem, 6vw, 4rem);
+				color: var(--gold);
+				margin-bottom: 1rem;
+				letter-spacing: 0.3rem;
+			}
+
+			.cta p {
+				font-size: 1.3rem;
+				color: var(--cream);
+				margin-bottom: 3rem;
+				font-style: italic;
+			}
+
+			.cta-button {
+				padding: 1.5rem 4rem;
+				background: transparent;
+				border: 3px solid var(--gold);
+				color: var(--gold);
+				font-family: 'Playfair Display', serif;
+				font-size: 1.2rem;
+				letter-spacing: 0.2rem;
+				cursor: pointer;
+				position: relative;
+				transition: all 0.4s;
+				overflow: hidden;
+			}
+
+			.cta-button::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: var(--gold);
+				transform: scaleX(0);
+				transform-origin: left;
+				transition: transform 0.4s;
+				z-index: -1;
+			}
+
+			.cta-button:hover::before {
+				transform: scaleX(1);
+			}
+
+			.cta-button:hover {
+				color: var(--dark);
+			}
+
+			.button-ornament {
+				position: absolute;
+				top: -8px;
+				right: -8px;
+				width: 16px;
+				height: 16px;
+				border: 2px solid var(--gold);
+				border-left: none;
+				border-bottom: none;
+				transition: all 0.4s;
+			}
+
+			.cta-button:hover .button-ornament {
+				border-color: var(--dark);
+			}
+
+			/* Footer */
+			footer {
+				padding: 3rem 0;
+				text-align: center;
+			}
+
+			.footer-divider {
+				width: 300px;
+				height: 2px;
+				background: linear-gradient(90deg, transparent, var(--gold), transparent);
+				margin: 0 auto 1.5rem;
+			}
+
+			footer p {
+				font-size: 0.9rem;
+				letter-spacing: 0.2rem;
+				color: var(--gold);
+			}
+
+			/* Responsive */
+			@media (max-width: 768px) {
+				.hero {
+					padding: 4rem 0;
+				}
+
+				h1 {
+					font-size: clamp(2rem, 8vw, 4rem);
+				}
+
+				.geometric-frame {
+					padding: 2rem;
+				}
+
+				.hero-description {
+					font-size: 1rem;
+				}
+
+				.section-header {
+					flex-direction: column;
+					gap: 1rem;
+				}
+
+				.section-header h2 {
+					font-size: 1.8rem;
+					white-space: normal;
+					text-align: center;
+				}
+
+				.features-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.cta h2 {
+					font-size: 2rem;
+				}
+
+				.cta-button {
+					padding: 1rem 2rem;
+					font-size: 1rem;
+				}
+			}
+		</style>
+	</body>
+</html>

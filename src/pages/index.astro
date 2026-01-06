@@ -102,6 +102,17 @@ const base = import.meta.env.BASE_URL;
 			</div>
 		</footer>
 
+		<script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', () => {
+					const swBase = "{{base}}";
+					navigator.serviceWorker
+						.register(swBase + "sw.js")
+						.catch((err) => console.error("Service worker registration failed", err));
+				});
+			}
+		</script>
+
 		<style>
 			* {
 				margin: 0;
