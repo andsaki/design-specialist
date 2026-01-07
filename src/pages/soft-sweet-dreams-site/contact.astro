@@ -1,0 +1,627 @@
+---
+import Header from '../../soft-sweet-dreams-site/components/Header.astro';
+import Footer from '../../soft-sweet-dreams-site/components/Footer.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Sweet Dreams</title>
+  <meta name="description" content="Sweet Dreamsへのお問い合わせ" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href={`${base}soft-sweet-dreams-site/styles/tokens.css`} />
+</head>
+<body>
+  <Header />
+
+  <!-- Floating Background -->
+  <div class="dream-bg">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>あなたの夢を聞かせてください</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-content">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <div class="form-header">
+            <h2>お問い合わせフォーム</h2>
+            <p>プロジェクトについてお聞かせください</p>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">お名前 <span class="required">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="山田 太郎"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">メールアドレス <span class="required">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="example@email.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="company">会社名</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="株式会社〇〇"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="service">サービス <span class="required">*</span></label>
+              <select id="service" name="service" required>
+                <option value="">選択してください</option>
+                <option value="branding">Branding</option>
+                <option value="web-design">Web Design</option>
+                <option value="ui-ux">UI/UX Design</option>
+                <option value="motion">Motion Design</option>
+                <option value="illustration">Illustration</option>
+                <option value="development">Development</option>
+                <option value="other">その他</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">予算</label>
+              <select id="budget" name="budget">
+                <option value="">選択してください</option>
+                <option value="under-500k">50万円未満</option>
+                <option value="500k-1m">50万円〜100万円</option>
+                <option value="1m-2m">100万円〜200万円</option>
+                <option value="over-2m">200万円以上</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">メッセージ <span class="required">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+                placeholder="プロジェクトの詳細をお聞かせください"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large">
+              送信する
+            </button>
+
+            <div id="formMessage" class="form-message"></div>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="info-card">
+            <div class="info-icon">📧</div>
+            <h3>Email</h3>
+            <a href="mailto:hello@sweetdreams.com">hello@sweetdreams.com</a>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">💬</div>
+            <h3>Social Media</h3>
+            <div class="social-links">
+              <a href="#" class="social-link">Twitter</a>
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">⏰</div>
+            <h3>営業時間</h3>
+            <p>平日 10:00 - 18:00</p>
+            <p class="note">土日祝日は休業</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">🌸</div>
+            <h3>レスポンス時間</h3>
+            <p>通常24時間以内に</p>
+            <p>返信いたします</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Helper -->
+  <section class="nav-helper">
+    <div class="container">
+      <div class="helper-content">
+        <div class="helper-text">
+          <h3>まだ決めていませんか？</h3>
+          <p>サービスやチームについて、もう少し詳しく見てみましょう</p>
+        </div>
+        <div class="helper-buttons">
+          <a href={`${base}soft-sweet-dreams-site/services`} class="btn btn-secondary">
+            サービスを見る
+          </a>
+          <a href={`${base}soft-sweet-dreams-site/about`} class="btn btn-secondary">
+            チームを知る
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</body>
+</html>
+
+<style>
+  body {
+    background: linear-gradient(135deg,
+      var(--dream-pink) 0%,
+      var(--dream-lavender) 30%,
+      var(--dream-mint) 60%,
+      var(--dream-cream) 100%);
+    min-height: 100vh;
+  }
+
+  /* Floating Background */
+  .dream-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .cloud {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .cloud-1 {
+    width: 350px;
+    height: 350px;
+    background: var(--dream-pink);
+    top: 10%;
+    left: 15%;
+  }
+
+  .cloud-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--dream-lavender);
+    top: 50%;
+    right: 15%;
+    animation-delay: 7s;
+  }
+
+  .cloud-3 {
+    width: 300px;
+    height: 300px;
+    background: var(--dream-mint);
+    bottom: 15%;
+    left: 30%;
+    animation-delay: 14s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(20px, -20px) scale(1.1);
+    }
+    50% {
+      transform: translate(-15px, -40px) scale(0.9);
+    }
+    75% {
+      transform: translate(10px, -20px) scale(1.05);
+    }
+  }
+
+  /* Page Hero */
+  .page-hero {
+    position: relative;
+    z-index: 1;
+    padding: 10rem 0 4rem;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: var(--fs-5xl);
+    font-weight: 700;
+    background: linear-gradient(135deg,
+      var(--dream-deep-purple),
+      var(--dream-accent-1),
+      var(--dream-accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+
+  .page-hero p {
+    font-family: var(--font-body);
+    font-size: var(--fs-xl);
+    color: var(--dream-purple);
+  }
+
+  /* Contact Section */
+  .contact-section {
+    position: relative;
+    z-index: 1;
+    padding: 4rem 0 6rem;
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+  }
+
+  /* Contact Form */
+  .contact-form-wrapper {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    border: 2px solid var(--glass-border);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .form-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .form-header h2 {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xl);
+    font-weight: 700;
+    color: var(--dream-deep-purple);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-header p {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--dream-purple);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-family: var(--font-display);
+    font-size: var(--fs-base);
+    font-weight: 600;
+    color: var(--dream-deep-purple);
+  }
+
+  .required {
+    color: var(--dream-accent-2);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: 2px solid rgba(139, 126, 159, 0.2);
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--dream-deep-purple);
+    transition: all 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--dream-accent-1);
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+  }
+
+  .btn-large {
+    padding: 1.25rem 3rem;
+    font-size: var(--fs-lg);
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .form-message {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    text-align: center;
+    display: none;
+  }
+
+  .form-message.success {
+    display: block;
+    background: rgba(134, 239, 172, 0.2);
+    border: 2px solid rgba(134, 239, 172, 0.5);
+    color: #166534;
+  }
+
+  .form-message.error {
+    display: block;
+    background: rgba(249, 168, 212, 0.2);
+    border: 2px solid rgba(249, 168, 212, 0.5);
+    color: #9f1239;
+  }
+
+  /* Contact Info */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .info-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 2px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+  }
+
+  .info-card:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .info-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-card h3 {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    color: var(--dream-deep-purple);
+    margin-bottom: 0.75rem;
+  }
+
+  .info-card p,
+  .info-card a {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--dream-purple);
+    line-height: 1.6;
+  }
+
+  .info-card a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .info-card a:hover {
+    color: var(--dream-deep-purple);
+  }
+
+  .note {
+    font-size: var(--fs-sm);
+    color: var(--dream-light-text);
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .social-link {
+    display: inline-block;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--dream-purple);
+    transition: all 0.3s ease;
+  }
+
+  .social-link:hover {
+    color: var(--dream-deep-purple);
+    transform: translateX(5px);
+  }
+
+  /* Navigation Helper */
+  .nav-helper {
+    position: relative;
+    z-index: 1;
+    padding: 4rem 0 6rem;
+  }
+
+  .helper-content {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    border: 2px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .helper-text h3 {
+    font-family: var(--font-display);
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    color: var(--dream-deep-purple);
+    margin-bottom: 0.5rem;
+  }
+
+  .helper-text p {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--dream-purple);
+  }
+
+  .helper-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-hero {
+      padding: 8rem 0 3rem;
+    }
+
+    .page-hero h1 {
+      font-size: var(--fs-4xl);
+    }
+
+    .page-hero p {
+      font-size: var(--fs-base);
+    }
+
+    .contact-section {
+      padding: 4rem 0;
+    }
+
+    .nav-helper {
+      padding: 3rem 0 4rem;
+    }
+
+    .helper-content {
+      flex-direction: column;
+      text-align: center;
+      padding: 2.5rem 2rem;
+    }
+
+    .helper-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .helper-buttons .btn {
+      width: 100%;
+    }
+
+    .contact-form-wrapper {
+      padding: 2.5rem 2rem;
+    }
+
+    .form-header h2 {
+      font-size: var(--fs-2xl);
+    }
+
+    .cloud-1, .cloud-2, .cloud-3 {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .page-hero h1 {
+      font-size: var(--fs-3xl);
+    }
+
+    .contact-form-wrapper {
+      padding: 2rem 1.5rem;
+    }
+
+    .form-header h2 {
+      font-size: var(--fs-xl);
+    }
+
+    .info-icon {
+      font-size: 2.5rem;
+    }
+
+    .info-card {
+      padding: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement;
+  const formMessage = document.getElementById('formMessage') as HTMLDivElement;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Simulate form submission
+    formMessage.textContent = '送信中...';
+    formMessage.className = 'form-message';
+    formMessage.style.display = 'block';
+
+    // Simulate API call
+    setTimeout(() => {
+      formMessage.textContent = 'お問い合わせありがとうございます！24時間以内に返信いたします。';
+      formMessage.className = 'form-message success';
+      form.reset();
+
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        formMessage.style.display = 'none';
+      }, 5000);
+    }, 1500);
+  });
+</script>

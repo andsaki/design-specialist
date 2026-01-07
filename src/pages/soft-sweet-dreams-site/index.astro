@@ -1,0 +1,1070 @@
+---
+import Header from '../../soft-sweet-dreams-site/components/Header.astro';
+import Footer from '../../soft-sweet-dreams-site/components/Footer.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soft Pastel Dreams - 柔らかな夢の世界へ</title>
+  <meta name="description" content="洗練されたパステルカラーと優雅なデザインで、心地よい体験を提供します" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Nunito:wght@300;400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href={`${base}soft-sweet-dreams-site/styles/tokens.css`} />
+</head>
+<body>
+  <Header />
+
+  <!-- Animated Background Gradient -->
+  <div class="gradient-bg">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="gradient-orb orb-4"></div>
+  </div>
+
+  <!-- Floating Petals -->
+  <div class="petals-container" aria-hidden="true">
+    <div class="petal petal-1">🌸</div>
+    <div class="petal petal-2">🌺</div>
+    <div class="petal petal-3">🌸</div>
+    <div class="petal petal-4">🌺</div>
+    <div class="petal petal-5">🌸</div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Soft & Sweet
+        </div>
+
+        <h1 class="hero-title">
+          <span class="title-line">柔らかな夢が</span>
+          <span class="title-line">紡ぐ世界</span>
+        </h1>
+
+        <p class="hero-description">
+          洗練されたパステルの調和と、優雅なタイポグラフィが織りなす<br class="desktop-break"/>
+          心地よく忘れられない体験をあなたに
+        </p>
+
+        <div class="hero-actions">
+          <a href={`${base}soft-sweet-dreams-site/services`} class="btn btn-primary">
+            始める
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href={`${base}soft-sweet-dreams-site/about`} class="btn btn-secondary">
+            詳しく見る
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-blob blob-1"></div>
+        <div class="visual-blob blob-2"></div>
+        <div class="visual-blob blob-3"></div>
+        <div class="visual-accent accent-1">✨</div>
+        <div class="visual-accent accent-2">💫</div>
+        <div class="visual-accent accent-3">⭐</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" fill="var(--soft-white)"/>
+    </svg>
+  </div>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Features</div>
+        <h2 class="section-title">私たちが大切にする3つの価値</h2>
+        <p class="section-subtitle">
+          パステルの魔法と、洗練されたデザインの融合
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon-wrapper">
+            <div class="feature-icon">🎨</div>
+          </div>
+          <h3 class="feature-title">洗練されたパステル</h3>
+          <p class="feature-description">
+            ブラッシュ、ラベンダー、ミントの繊細な調和が、
+            心を癒やし、温かみのある体験を創り出します。
+            彩度を抑えた色彩が、上品な印象を演出します。
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon-wrapper">
+            <div class="feature-icon">💎</div>
+          </div>
+          <h3 class="feature-title">優雅なタイポグラフィ</h3>
+          <p class="feature-description">
+            セリフとサンセリフの絶妙なバランスが、
+            エレガントさと可読性を両立。
+            フォントの選択一つひとつに、こだわりが宿ります。
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon-wrapper">
+            <div class="feature-icon">✨</div>
+          </div>
+          <h3 class="feature-title">有機的な動き</h3>
+          <p class="feature-description">
+            波打つような背景、浮遊する花びら、
+            morphingするblob形状が、自然で心地よい動きを生み出し、
+            訪れる人を優しく包み込みます。
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Showcase -->
+  <section class="services-showcase">
+    <div class="container">
+      <div class="showcase-layout">
+        <div class="showcase-visual">
+          <div class="showcase-blob blob"></div>
+          <div class="showcase-cards">
+            <div class="service-mini-card card-1">
+              <div class="mini-icon">🎨</div>
+              <div class="mini-text">Branding</div>
+            </div>
+            <div class="service-mini-card card-2">
+              <div class="mini-icon">💻</div>
+              <div class="mini-text">Web Design</div>
+            </div>
+            <div class="service-mini-card card-3">
+              <div class="mini-icon">📱</div>
+              <div class="mini-text">UI/UX</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-content">
+          <div class="section-label">Services</div>
+          <h2 class="showcase-title">
+            あなたのビジョンを<br/>
+            <span class="text-gradient">夢のような体験</span>に
+          </h2>
+          <p class="showcase-description">
+            ブランディングから実装まで、トータルでサポート。
+            デザイン一つひとつに魂を込め、
+            忘れられない印象を創り出します。
+          </p>
+
+          <ul class="showcase-list">
+            <li class="list-item">
+              <span class="list-icon">✓</span>
+              <span>ブランドアイデンティティの構築</span>
+            </li>
+            <li class="list-item">
+              <span class="list-icon">✓</span>
+              <span>レスポンシブWebデザイン</span>
+            </li>
+            <li class="list-item">
+              <span class="list-icon">✓</span>
+              <span>モバイルアプリUI/UX設計</span>
+            </li>
+          </ul>
+
+          <a href={`${base}soft-sweet-dreams-site/services`} class="btn btn-primary">
+            サービス一覧を見る
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial">
+    <div class="container-narrow">
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <blockquote class="testimonial-quote">
+          繊細で優雅なデザインが、私たちのブランドイメージを完璧に表現してくれました。
+          パステルカラーの使い方が絶妙で、ユーザーからの評判も上々です。
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <div class="author-name">佐藤 美咲</div>
+            <div class="author-title">株式会社フラワーブーケ CEO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-content">
+          <h2 class="cta-title">
+            あなたのプロジェクトを<br/>
+            <span class="text-gradient-sunset">夢の世界</span>へ
+          </h2>
+          <p class="cta-description">
+            今すぐ始めて、忘れられない体験を創り出しましょう
+          </p>
+          <a href={`${base}soft-sweet-dreams-site/contact`} class="btn btn-primary btn-large">
+            お問い合わせ
+            <svg width="24" height="24" viewBox="0 0 20 20" fill="none">
+              <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="cta-decoration">
+          <div class="decoration-blob blob"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</body>
+</html>
+
+<style>
+  /* Body & Background */
+  body {
+    position: relative;
+    overflow-x: hidden;
+    background: var(--soft-white);
+  }
+
+  /* Animated Gradient Background */
+  .gradient-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-background);
+    overflow: hidden;
+  }
+
+  .gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+    animation: floatOrb 25s ease-in-out infinite;
+  }
+
+  .orb-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--pastel-blush);
+    top: -10%;
+    left: -10%;
+    animation-delay: 0s;
+  }
+
+  .orb-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--pastel-lavender);
+    top: 20%;
+    right: -5%;
+    animation-delay: 7s;
+  }
+
+  .orb-3 {
+    width: 600px;
+    height: 600px;
+    background: var(--pastel-mint);
+    bottom: -15%;
+    left: 20%;
+    animation-delay: 14s;
+  }
+
+  .orb-4 {
+    width: 350px;
+    height: 350px;
+    background: var(--pastel-peach);
+    top: 60%;
+    right: 10%;
+    animation-delay: 21s;
+  }
+
+  @keyframes floatOrb {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, -30px) scale(0.95);
+    }
+  }
+
+  /* Floating Petals */
+  .petals-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: var(--z-raised);
+    overflow: hidden;
+  }
+
+  .petal {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.6;
+    animation: fallPetal 15s linear infinite;
+  }
+
+  .petal-1 {
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .petal-2 {
+    left: 30%;
+    animation-delay: 3s;
+  }
+
+  .petal-3 {
+    left: 50%;
+    animation-delay: 6s;
+  }
+
+  .petal-4 {
+    left: 70%;
+    animation-delay: 9s;
+  }
+
+  .petal-5 {
+    left: 90%;
+    animation-delay: 12s;
+  }
+
+  @keyframes fallPetal {
+    0% {
+      top: -10%;
+      transform: translateX(0) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.6;
+    }
+    90% {
+      opacity: 0.6;
+    }
+    100% {
+      top: 110%;
+      transform: translateX(100px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    padding: var(--space-24) 0 var(--space-20);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-16);
+    align-items: center;
+  }
+
+  .hero-content {
+    z-index: var(--z-base);
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-5);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-full);
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--text-accent);
+    margin-bottom: var(--space-8);
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-rose);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(0.9);
+    }
+  }
+
+  .hero-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-6xl);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-tight);
+    color: var(--text-accent);
+    margin-bottom: var(--space-8);
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+  }
+
+  .title-line {
+    display: block;
+  }
+
+  .hero-description {
+    font-family: var(--font-body);
+    font-size: var(--fs-lg);
+    line-height: var(--lh-relaxed);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-10);
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+  }
+
+  .desktop-break {
+    display: block;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-4);
+    animation: fadeInUp 0.8s ease-out 0.6s backwards;
+  }
+
+  /* Hero Visual */
+  .hero-visual {
+    position: relative;
+    height: 600px;
+    animation: fadeIn 1s ease-out 0.4s backwards;
+  }
+
+  .visual-blob {
+    position: absolute;
+    border-radius: var(--radius-blob);
+    animation: morph 8s ease-in-out infinite;
+  }
+
+  .blob-1 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--pastel-rose), var(--pastel-lavender));
+    top: 10%;
+    left: 10%;
+    opacity: 0.6;
+    animation-delay: 0s;
+  }
+
+  .blob-2 {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, var(--pastel-mint), var(--pastel-sky));
+    bottom: 20%;
+    right: 10%;
+    opacity: 0.5;
+    animation-delay: 2.6s;
+  }
+
+  .blob-3 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, var(--pastel-peach), var(--pastel-blush));
+    top: 45%;
+    left: 30%;
+    opacity: 0.4;
+    animation-delay: 5.3s;
+  }
+
+  .visual-accent {
+    position: absolute;
+    font-size: 3rem;
+    animation: floatAccent 4s ease-in-out infinite;
+  }
+
+  .accent-1 {
+    top: 15%;
+    right: 20%;
+    animation-delay: 0s;
+  }
+
+  .accent-2 {
+    bottom: 25%;
+    left: 15%;
+    animation-delay: 1.3s;
+  }
+
+  .accent-3 {
+    top: 50%;
+    right: 5%;
+    animation-delay: 2.6s;
+  }
+
+  @keyframes floatAccent {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(10deg);
+    }
+  }
+
+  /* Wave Divider */
+  .wave-divider {
+    position: relative;
+    z-index: var(--z-base);
+    margin-top: calc(var(--space-16) * -1);
+  }
+
+  .wave-divider svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Features Section */
+  .features {
+    position: relative;
+    padding: var(--space-20) 0;
+    background: var(--soft-white);
+    z-index: var(--z-base);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-16);
+  }
+
+  .section-label {
+    display: inline-block;
+    font-family: var(--font-accent);
+    font-size: var(--fs-xl);
+    color: var(--accent-violet);
+    margin-bottom: var(--space-4);
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-4xl);
+    font-weight: var(--fw-regular);
+    color: var(--text-accent);
+    margin-bottom: var(--space-4);
+  }
+
+  .section-subtitle {
+    font-family: var(--font-body);
+    font-size: var(--fs-lg);
+    color: var(--text-secondary);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+
+  .feature-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 2px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-10);
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all var(--transition-base);
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .feature-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+
+  .feature-icon-wrapper {
+    margin-bottom: var(--space-6);
+  }
+
+  .feature-icon {
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  .feature-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-regular);
+    color: var(--text-accent);
+    margin-bottom: var(--space-4);
+  }
+
+  .feature-description {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    line-height: var(--lh-relaxed);
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  /* Services Showcase */
+  .services-showcase {
+    position: relative;
+    padding: var(--space-20) 0;
+    background: var(--soft-white);
+  }
+
+  .showcase-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+  }
+
+  .showcase-visual {
+    position: relative;
+    height: 500px;
+  }
+
+  .showcase-blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, var(--pastel-periwinkle), var(--pastel-rose));
+    opacity: 0.3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .showcase-cards {
+    position: relative;
+    height: 100%;
+  }
+
+  .service-mini-card {
+    position: absolute;
+    background: var(--glass-bg-strong);
+    backdrop-filter: var(--glass-blur-strong);
+    border: 2px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    transition: all var(--transition-base);
+  }
+
+  .service-mini-card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .card-1 {
+    top: 15%;
+    left: 10%;
+    animation: floatCard 6s ease-in-out infinite;
+  }
+
+  .card-2 {
+    top: 45%;
+    right: 15%;
+    animation: floatCard 6s ease-in-out infinite 2s;
+  }
+
+  .card-3 {
+    bottom: 20%;
+    left: 20%;
+    animation: floatCard 6s ease-in-out infinite 4s;
+  }
+
+  @keyframes floatCard {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .mini-icon {
+    font-size: 2rem;
+  }
+
+  .mini-text {
+    font-family: var(--font-display);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    color: var(--text-accent);
+  }
+
+  .showcase-content {
+    /* Content styling */
+  }
+
+  .showcase-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-4xl);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-tight);
+    color: var(--text-accent);
+    margin-bottom: var(--space-6);
+  }
+
+  .showcase-description {
+    font-family: var(--font-body);
+    font-size: var(--fs-lg);
+    line-height: var(--lh-relaxed);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-8);
+  }
+
+  .showcase-list {
+    list-style: none;
+    margin-bottom: var(--space-10);
+  }
+
+  .list-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--text-primary);
+    margin-bottom: var(--space-4);
+  }
+
+  .list-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--accent-mint);
+    color: var(--soft-white);
+    border-radius: 50%;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    flex-shrink: 0;
+  }
+
+  /* Testimonial */
+  .testimonial {
+    padding: var(--space-20) 0;
+    background: var(--soft-white);
+  }
+
+  .testimonial-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 2px solid var(--glass-border);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-16);
+    box-shadow: var(--shadow-lg);
+    position: relative;
+  }
+
+  .quote-mark {
+    font-family: var(--font-heading);
+    font-size: 6rem;
+    line-height: 1;
+    color: var(--accent-violet);
+    opacity: 0.2;
+    position: absolute;
+    top: var(--space-8);
+    left: var(--space-8);
+  }
+
+  .testimonial-quote {
+    font-family: var(--font-body);
+    font-size: var(--fs-xl);
+    line-height: var(--lh-relaxed);
+    color: var(--text-primary);
+    margin: 0 0 var(--space-8) 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .author-info {
+    text-align: left;
+  }
+
+  .author-name {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semibold);
+    color: var(--text-accent);
+    margin-bottom: var(--space-1);
+  }
+
+  .author-title {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+  }
+
+  /* CTA Section */
+  .cta {
+    padding: var(--space-20) 0;
+    background: var(--soft-white);
+  }
+
+  .cta-card {
+    background: var(--gradient-dreamy);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-16);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cta-content {
+    position: relative;
+    z-index: var(--z-base);
+    max-width: 600px;
+  }
+
+  .cta-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-4xl);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-tight);
+    color: var(--text-accent);
+    margin-bottom: var(--space-4);
+  }
+
+  .cta-description {
+    font-family: var(--font-body);
+    font-size: var(--fs-lg);
+    color: var(--text-primary);
+    margin-bottom: var(--space-8);
+  }
+
+  .cta-decoration {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+
+  .decoration-blob {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--pastel-sky), var(--pastel-mint));
+    opacity: 0.5;
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .hero .container {
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+    }
+
+    .hero-visual {
+      height: 400px;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+
+    .showcase-layout {
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+    }
+
+    .showcase-visual {
+      order: 2;
+      height: 400px;
+    }
+
+    .showcase-content {
+      order: 1;
+    }
+
+    .cta-card {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .cta-content {
+      max-width: 100%;
+    }
+
+    .cta-decoration {
+      margin-top: var(--space-8);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: var(--space-16) 0 var(--space-12);
+      min-height: auto;
+    }
+
+    .hero-title {
+      font-size: var(--fs-4xl);
+    }
+
+    .hero-description {
+      font-size: var(--fs-base);
+    }
+
+    .desktop-break {
+      display: none;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .hero-actions .btn {
+      width: 100%;
+    }
+
+    .hero-visual {
+      height: 300px;
+    }
+
+    .visual-blob {
+      width: 60% !important;
+      height: 60% !important;
+    }
+
+    .visual-accent {
+      font-size: 2rem;
+    }
+
+    .showcase-visual {
+      height: 300px;
+    }
+
+    .cta-decoration {
+      width: 200px;
+      height: 200px;
+    }
+
+    .orb-1, .orb-2, .orb-3, .orb-4 {
+      width: 250px !important;
+      height: 250px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: var(--fs-3xl);
+    }
+
+    .section-title {
+      font-size: var(--fs-3xl);
+    }
+
+    .showcase-title,
+    .cta-title {
+      font-size: var(--fs-3xl);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+    }
+
+    .testimonial-quote {
+      font-size: var(--fs-lg);
+    }
+  }
+</style>
+
+<script>
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // Observe feature cards
+  document.querySelectorAll('.feature-card').forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.1}s`;
+    observer.observe(card);
+  });
+</script>

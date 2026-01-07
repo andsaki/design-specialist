@@ -1,0 +1,695 @@
+---
+import Header from '../../soft-sweet-dreams-site/components/Header.astro';
+import Footer from '../../soft-sweet-dreams-site/components/Footer.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Sweet Dreams</title>
+  <meta name="description" content="Sweet Dreamsについて、私たちの想いとチームを紹介します" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href={`${base}soft-sweet-dreams-site/styles/tokens.css`} />
+</head>
+<body>
+  <Header />
+
+  <!-- Floating Background -->
+  <div class="dream-bg">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>About Us</h1>
+      <p>夢のような体験を創るデザインスタジオ</p>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-content">
+        <div class="story-text">
+          <h2>私たちのストーリー</h2>
+          <p>
+            Sweet Dreamsは、柔らかく夢のようなデザインで、
+            人々の心を癒し、温かみのある体験を提供することを使命としています。
+          </p>
+          <p>
+            パステルカラーの優しい色彩、透明感のあるグラスモーフィズム、
+            そして軽やかなアニメーションが織りなす世界は、
+            ユーザーを忘れられない旅へと誘います。
+          </p>
+          <p>
+            私たちは、ただ美しいだけでなく、
+            機能的で使いやすいデザインを追求し続けています。
+          </p>
+        </div>
+
+        <div class="story-visual">
+          <div class="visual-card card-1">
+            <div class="emoji">🌸</div>
+          </div>
+          <div class="visual-card card-2">
+            <div class="emoji">☁️</div>
+          </div>
+          <div class="visual-card card-3">
+            <div class="emoji">✨</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>私たちの価値観</h2>
+        <p>Sweet Dreamsが大切にする3つの核心</p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-number">01</div>
+          <h3>優しさ</h3>
+          <p>
+            すべてのデザインに優しさを込めて。
+            柔らかな色彩と丸みを帯びた形状が、
+            心地よい体験を生み出します。
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-number">02</div>
+          <h3>創造性</h3>
+          <p>
+            既存の枠にとらわれない、
+            独創的で記憶に残るデザインを追求。
+            夢のような世界観を現実に。
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-number">03</div>
+          <h3>品質</h3>
+          <p>
+            美しさと機能性の両立。
+            細部へのこだわりと洗練された実装で、
+            プロダクショングレードの品質を保証。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Team</h2>
+        <p>夢を創るクリエイターたち</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="member-avatar">🌸</div>
+          <h4>Sakura Yume</h4>
+          <p class="member-role">Creative Director</p>
+          <p class="member-bio">
+            パステルカラーとフローラルデザインのスペシャリスト。
+            柔らかな世界観を創り出します。
+          </p>
+        </div>
+
+        <div class="team-member">
+          <div class="member-avatar">☁️</div>
+          <h4>Sora Cloud</h4>
+          <p class="member-role">Lead Designer</p>
+          <p class="member-bio">
+            グラスモーフィズムとアニメーションの達人。
+            軽やかな体験を設計します。
+          </p>
+        </div>
+
+        <div class="team-member">
+          <div class="member-avatar">✨</div>
+          <h4>Hikari Star</h4>
+          <p class="member-role">UI/UX Designer</p>
+          <p class="member-bio">
+            ユーザー体験を最優先に、
+            心地よいインタラクションを実現します。
+          </p>
+        </div>
+
+        <div class="team-member">
+          <div class="member-avatar">💫</div>
+          <h4>Luna Moon</h4>
+          <p class="member-role">Front-end Developer</p>
+          <p class="member-bio">
+            夢のようなデザインをコードで実現する
+            技術のスペシャリストです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Steps Section -->
+  <section class="next-steps-section">
+    <div class="container">
+      <div class="next-steps-content">
+        <div class="next-step-card">
+          <h3>次のステップ</h3>
+          <p>私たちのサービスをご覧ください</p>
+          <a href={`${base}soft-sweet-dreams-site/services`} class="btn btn-primary">
+            サービスを見る
+          </a>
+        </div>
+        <div class="next-step-divider">または</div>
+        <div class="next-step-card">
+          <h3>今すぐ相談</h3>
+          <p>プロジェクトについてお話しましょう</p>
+          <a href={`${base}soft-sweet-dreams-site/contact`} class="btn btn-secondary">
+            お問い合わせ
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</body>
+</html>
+
+<style>
+  body {
+    background: linear-gradient(135deg,
+      var(--dream-pink) 0%,
+      var(--dream-lavender) 30%,
+      var(--dream-mint) 60%,
+      var(--dream-cream) 100%);
+    min-height: 100vh;
+  }
+
+  /* Floating Background */
+  .dream-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .cloud {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .cloud-1 {
+    width: 350px;
+    height: 350px;
+    background: var(--dream-lavender);
+    top: 15%;
+    left: 10%;
+  }
+
+  .cloud-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--dream-mint);
+    top: 50%;
+    right: 10%;
+    animation-delay: 7s;
+  }
+
+  .cloud-3 {
+    width: 300px;
+    height: 300px;
+    background: var(--dream-peach);
+    bottom: 15%;
+    left: 25%;
+    animation-delay: 14s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(20px, -20px) scale(1.1);
+    }
+    50% {
+      transform: translate(-15px, -40px) scale(0.9);
+    }
+    75% {
+      transform: translate(10px, -20px) scale(1.05);
+    }
+  }
+
+  /* Page Hero */
+  .page-hero {
+    position: relative;
+    z-index: 1;
+    padding: 10rem 0 4rem;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: var(--fs-5xl);
+    font-weight: 700;
+    background: linear-gradient(135deg,
+      var(--dream-deep-purple),
+      var(--dream-accent-1),
+      var(--dream-accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+
+  .page-hero p {
+    font-family: var(--font-body);
+    font-size: var(--fs-xl);
+    color: var(--dream-purple);
+  }
+
+  /* Story Section */
+  .story-section {
+    position: relative;
+    z-index: 1;
+    padding: 4rem 0;
+  }
+
+  .story-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .story-text h2 {
+    font-family: var(--font-display);
+    font-size: var(--fs-4xl);
+    font-weight: 700;
+    color: var(--dream-deep-purple);
+    margin-bottom: 2rem;
+  }
+
+  .story-text p {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--dream-purple);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .story-visual {
+    position: relative;
+    height: 400px;
+  }
+
+  .visual-card {
+    position: absolute;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  .visual-card .emoji {
+    font-size: 4rem;
+  }
+
+  .card-1 {
+    top: 10%;
+    left: 10%;
+    animation: floatCard 4s ease-in-out infinite;
+  }
+
+  .card-2 {
+    top: 50%;
+    right: 10%;
+    animation: floatCard 4s ease-in-out infinite 1s;
+  }
+
+  .card-3 {
+    bottom: 10%;
+    left: 30%;
+    animation: floatCard 4s ease-in-out infinite 2s;
+  }
+
+  .visual-card:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  @keyframes floatCard {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* Values Section */
+  .values-section {
+    position: relative;
+    z-index: 1;
+    padding: 6rem 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-family: var(--font-display);
+    font-size: var(--fs-4xl);
+    font-weight: 700;
+    color: var(--dream-deep-purple);
+    margin-bottom: 1rem;
+  }
+
+  .section-header p {
+    font-family: var(--font-body);
+    font-size: var(--fs-lg);
+    color: var(--dream-purple);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .value-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--radius-lg);
+    padding: 3rem 2.5rem;
+    border: 2px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+  }
+
+  .value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .value-number {
+    font-family: var(--font-display);
+    font-size: var(--fs-3xl);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--dream-accent-1), var(--dream-accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+
+  .value-card h3 {
+    font-family: var(--font-display);
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    color: var(--dream-deep-purple);
+    margin-bottom: 1rem;
+  }
+
+  .value-card p {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: var(--dream-purple);
+    line-height: 1.7;
+  }
+
+  /* Team Section */
+  .team-section {
+    position: relative;
+    z-index: 1;
+    padding: 6rem 0;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .team-member {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+    border: 2px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .member-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg,
+      var(--dream-pink),
+      var(--dream-lavender),
+      var(--dream-mint));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    box-shadow: 0 8px 24px rgba(192, 132, 252, 0.3);
+  }
+
+  .team-member h4 {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    color: var(--dream-deep-purple);
+    margin-bottom: 0.5rem;
+  }
+
+  .member-role {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: var(--dream-accent-1);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .member-bio {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    color: var(--dream-purple);
+    line-height: 1.6;
+  }
+
+  /* Next Steps Section */
+  .next-steps-section {
+    position: relative;
+    z-index: 1;
+    padding: 6rem 0;
+  }
+
+  .next-steps-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .next-step-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: var(--radius-lg);
+    padding: 3rem 2.5rem;
+    border: 2px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .next-step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .next-step-card h3 {
+    font-family: var(--font-display);
+    font-size: var(--fs-2xl);
+    font-weight: 700;
+    color: var(--dream-deep-purple);
+    margin-bottom: 1rem;
+  }
+
+  .next-step-card p {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--dream-purple);
+    margin-bottom: 2rem;
+  }
+
+  .next-step-card .btn {
+    width: 100%;
+  }
+
+  .next-step-divider {
+    font-family: var(--font-display);
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    color: var(--dream-purple);
+    padding: 1rem;
+  }
+
+  .btn-large {
+    padding: 1.25rem 3rem;
+    font-size: var(--fs-lg);
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .story-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .story-visual {
+      height: 300px;
+    }
+
+    .visual-card {
+      width: 120px;
+      height: 120px;
+    }
+
+    .visual-card .emoji {
+      font-size: 3rem;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-hero {
+      padding: 8rem 0 3rem;
+    }
+
+    .page-hero h1 {
+      font-size: var(--fs-4xl);
+    }
+
+    .page-hero p {
+      font-size: var(--fs-base);
+    }
+
+    .story-section,
+    .values-section,
+    .team-section,
+    .next-steps-section {
+      padding: 4rem 0;
+    }
+
+    .next-steps-content {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .next-step-divider {
+      text-align: center;
+    }
+
+    .story-text h2,
+    .section-header h2,
+    .cta-content h2 {
+      font-size: var(--fs-3xl);
+    }
+
+    .story-visual {
+      height: 250px;
+    }
+
+    .visual-card {
+      width: 100px;
+      height: 100px;
+    }
+
+    .visual-card .emoji {
+      font-size: 2.5rem;
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .cta-content {
+      padding: 3rem 2rem;
+    }
+
+    .btn-large {
+      width: 100%;
+    }
+
+    .cloud-1, .cloud-2, .cloud-3 {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .page-hero h1 {
+      font-size: var(--fs-3xl);
+    }
+
+    .story-text h2,
+    .section-header h2,
+    .cta-content h2 {
+      font-size: 2rem;
+    }
+
+    .member-avatar {
+      width: 80px;
+      height: 80px;
+      font-size: 2.5rem;
+    }
+  }
+</style>

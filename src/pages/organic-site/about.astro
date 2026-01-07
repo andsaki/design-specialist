@@ -197,6 +197,29 @@ const base = import.meta.env.BASE_URL;
 			</div>
 		</section>
 
+		<!-- Next Steps Section -->
+		<section class="next-steps">
+			<div class="container">
+				<div class="next-steps-grid">
+					<div class="next-step-card">
+						<h3>次のステップ</h3>
+						<p>私たちのサービスと料金プランをご覧ください</p>
+						<a href={`${base}organic-site/services`} class="btn btn-primary">
+							サービスを見る
+						</a>
+					</div>
+					<div class="next-step-divider">または</div>
+					<div class="next-step-card">
+						<h3>今すぐ相談</h3>
+						<p>プロジェクトについてお話しましょう</p>
+						<a href={`${base}organic-site/contact`} class="btn btn-secondary">
+							お問い合わせ
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<Footer />
 
 		<style>
@@ -458,6 +481,57 @@ const base = import.meta.env.BASE_URL;
 				line-height: 1.6;
 			}
 
+			/* Next Steps Section */
+			.next-steps {
+				padding: var(--spacing-4xl) 0;
+			}
+
+			.next-steps-grid {
+				display: grid;
+				grid-template-columns: 1fr auto 1fr;
+				gap: var(--spacing-xl);
+				align-items: center;
+			}
+
+			.next-step-card {
+				background: var(--color-surface);
+				padding: var(--spacing-3xl);
+				border-radius: var(--radius-lg);
+				box-shadow: var(--shadow-md);
+				text-align: center;
+				transition: var(--transition-base);
+			}
+
+			.next-step-card:hover {
+				transform: translateY(-10px);
+				box-shadow: var(--shadow-lg);
+			}
+
+			.next-step-card h3 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-2xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-md);
+			}
+
+			.next-step-card p {
+				color: var(--color-text-light);
+				margin-bottom: var(--spacing-lg);
+				line-height: 1.6;
+			}
+
+			.next-step-card .btn {
+				width: 100%;
+			}
+
+			.next-step-divider {
+				font-family: var(--font-display);
+				font-size: var(--font-size-lg);
+				font-weight: 600;
+				color: var(--color-text-light);
+				padding: var(--spacing-md);
+			}
+
 			/* Responsive */
 			@media (max-width: 968px) {
 				.mission-grid {
@@ -475,6 +549,15 @@ const base = import.meta.env.BASE_URL;
 
 				.team-grid {
 					grid-template-columns: 1fr;
+				}
+
+				.next-steps-grid {
+					grid-template-columns: 1fr;
+					gap: var(--spacing-lg);
+				}
+
+				.next-step-divider {
+					text-align: center;
 				}
 			}
 

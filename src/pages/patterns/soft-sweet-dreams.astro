@@ -1,0 +1,679 @@
+---
+// Soft & Sweet Dreams - 夢のような柔らかいデザインパターン
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soft & Sweet Dreams - Design Pattern</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Soft & Sweet Dreams Color Palette */
+      --dream-pink: #FFD6E8;
+      --dream-lavender: #E6D9FF;
+      --dream-mint: #D4F4DD;
+      --dream-cream: #FFF8E7;
+      --dream-peach: #FFE5D9;
+      --dream-purple: #8B7E9F;
+      --dream-deep-purple: #6B5B7A;
+      --dream-white: #FFFFFF;
+
+      /* Typography */
+      --font-display: 'Quicksand', sans-serif;
+      --font-body: 'Nunito', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: linear-gradient(135deg,
+        var(--dream-pink) 0%,
+        var(--dream-lavender) 30%,
+        var(--dream-mint) 60%,
+        var(--dream-cream) 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      color: var(--dream-deep-purple);
+    }
+
+    /* Floating background elements */
+    .dream-bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .cloud {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.3;
+      animation: float 20s ease-in-out infinite;
+    }
+
+    .cloud-1 {
+      width: 300px;
+      height: 300px;
+      background: var(--dream-pink);
+      top: 10%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .cloud-2 {
+      width: 400px;
+      height: 400px;
+      background: var(--dream-lavender);
+      top: 40%;
+      right: 10%;
+      animation-delay: 5s;
+    }
+
+    .cloud-3 {
+      width: 250px;
+      height: 250px;
+      background: var(--dream-mint);
+      bottom: 20%;
+      left: 30%;
+      animation-delay: 10s;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.2));
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      animation: bubble-rise 15s ease-in-out infinite;
+    }
+
+    .bubble-1 {
+      width: 80px;
+      height: 80px;
+      bottom: -100px;
+      left: 20%;
+      animation-delay: 0s;
+    }
+
+    .bubble-2 {
+      width: 120px;
+      height: 120px;
+      bottom: -120px;
+      left: 50%;
+      animation-delay: 3s;
+    }
+
+    .bubble-3 {
+      width: 60px;
+      height: 60px;
+      bottom: -80px;
+      right: 25%;
+      animation-delay: 6s;
+    }
+
+    .bubble-4 {
+      width: 100px;
+      height: 100px;
+      bottom: -110px;
+      right: 10%;
+      animation-delay: 9s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+      }
+      25% {
+        transform: translate(20px, -20px) scale(1.1);
+      }
+      50% {
+        transform: translate(-15px, -40px) scale(0.9);
+      }
+      75% {
+        transform: translate(10px, -20px) scale(1.05);
+      }
+    }
+
+    @keyframes bubble-rise {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.8;
+      }
+      90% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(100px);
+        opacity: 0;
+      }
+    }
+
+    /* Content */
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      background: linear-gradient(135deg,
+        var(--dream-deep-purple) 0%,
+        #C084FC 50%,
+        #F9A8D4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      color: var(--dream-purple);
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    /* Glass Cards */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(20px);
+      border-radius: 30px;
+      padding: 3rem 2rem;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      box-shadow:
+        0 8px 32px rgba(139, 126, 159, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.8s ease-out backwards;
+    }
+
+    .glass-card:nth-child(1) { animation-delay: 0.1s; }
+    .glass-card:nth-child(2) { animation-delay: 0.2s; }
+    .glass-card:nth-child(3) { animation-delay: 0.3s; }
+
+    .glass-card:hover {
+      transform: translateY(-10px);
+      box-shadow:
+        0 16px 48px rgba(139, 126, 159, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+
+    .card-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin: 0 auto 1.5rem;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .glass-card:nth-child(1) .card-icon {
+      background: linear-gradient(135deg, var(--dream-pink), var(--dream-lavender));
+      animation-delay: 0s;
+    }
+
+    .glass-card:nth-child(2) .card-icon {
+      background: linear-gradient(135deg, var(--dream-lavender), var(--dream-mint));
+      animation-delay: 1s;
+    }
+
+    .glass-card:nth-child(3) .card-icon {
+      background: linear-gradient(135deg, var(--dream-mint), var(--dream-peach));
+      animation-delay: 2s;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--dream-deep-purple);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .card-description {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--dream-purple);
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    /* Feature Section */
+    .feature-section {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(30px);
+      border-radius: 40px;
+      padding: 4rem 3rem;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      box-shadow:
+        0 12px 40px rgba(139, 126, 159, 0.2),
+        inset 0 2px 0 rgba(255, 255, 255, 0.9);
+      margin-bottom: 4rem;
+      animation: fadeInUp 1s ease-out 0.4s backwards;
+    }
+
+    .feature-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 600;
+      color: var(--dream-deep-purple);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .feature-emoji {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    .feature-content h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--dream-deep-purple);
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-content p {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--dream-purple);
+      line-height: 1.6;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      animation: fadeInUp 1s ease-out 0.6s backwards;
+    }
+
+    .cta-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--dream-deep-purple);
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1.25rem 3rem;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--dream-white);
+      background: linear-gradient(135deg,
+        #C084FC 0%,
+        #F9A8D4 100%);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow:
+        0 8px 24px rgba(192, 132, 252, 0.4),
+        0 4px 12px rgba(249, 168, 212, 0.3);
+      transition: all 0.3s ease;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow:
+        0 12px 32px rgba(192, 132, 252, 0.5),
+        0 6px 16px rgba(249, 168, 212, 0.4);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.02);
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .container {
+        padding: 3rem 1.5rem;
+      }
+
+      .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .feature-section {
+        padding: 3rem 2rem;
+      }
+
+      .cloud-1, .cloud-2, .cloud-3 {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem 1rem;
+      }
+
+      header {
+        margin-bottom: 3rem;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+      }
+
+      .subtitle {
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .glass-card {
+        padding: 2.5rem 1.5rem;
+        border-radius: 25px;
+      }
+
+      .card-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+      }
+
+      .card-description {
+        font-size: 0.95rem;
+      }
+
+      .feature-section {
+        padding: 2.5rem 1.5rem;
+        border-radius: 30px;
+      }
+
+      .feature-title {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+        margin-bottom: 2rem;
+      }
+
+      .features-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .feature-emoji {
+        font-size: 1.75rem;
+      }
+
+      .cta-section {
+        padding: 2rem 1rem;
+      }
+
+      .cta-title {
+        font-size: clamp(1.75rem, 7vw, 3rem);
+      }
+
+      .cta-button {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .cloud-1 {
+        width: 150px;
+        height: 150px;
+        top: 5%;
+        left: 5%;
+      }
+
+      .cloud-2 {
+        width: 180px;
+        height: 180px;
+        top: 50%;
+        right: 5%;
+      }
+
+      .cloud-3 {
+        width: 120px;
+        height: 120px;
+        bottom: 10%;
+        left: 10%;
+      }
+
+      .bubble {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem 0.75rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+      }
+
+      .glass-card {
+        padding: 2rem 1.25rem;
+        border-radius: 20px;
+      }
+
+      .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.75rem;
+      }
+
+      .card-title {
+        font-size: 1.35rem;
+      }
+
+      .feature-section {
+        padding: 2rem 1.25rem;
+        border-radius: 25px;
+      }
+
+      .feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .cta-button {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Background Elements -->
+  <div class="dream-bg">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Soft & Sweet Dreams</h1>
+      <p class="subtitle">夢のような柔らかい世界へようこそ</p>
+    </header>
+
+    <!-- Glass Cards -->
+    <div class="cards-grid">
+      <div class="glass-card">
+        <div class="card-icon">🌸</div>
+        <h2 class="card-title">優しさの魔法</h2>
+        <p class="card-description">
+          柔らかいパステルカラーと丸みを帯びたデザインが、心地よい空間を作り出します。
+        </p>
+      </div>
+
+      <div class="glass-card">
+        <div class="card-icon">☁️</div>
+        <h2 class="card-title">浮遊する夢</h2>
+        <p class="card-description">
+          雲のように軽やかなアニメーションが、あなたを夢の世界へと誘います。
+        </p>
+      </div>
+
+      <div class="glass-card">
+        <div class="card-icon">✨</div>
+        <h2 class="card-title">輝く瞬間</h2>
+        <p class="card-description">
+          グラスモーフィズムの繊細な輝きが、特別な体験を演出します。
+        </p>
+      </div>
+    </div>
+
+    <!-- Feature Section -->
+    <section class="feature-section">
+      <h2 class="feature-title">夢のようなデザインの特徴</h2>
+      <div class="features-list">
+        <div class="feature-item">
+          <span class="feature-emoji">🎨</span>
+          <div class="feature-content">
+            <h3>パステルパレット</h3>
+            <p>ピンク、ラベンダー、ミントの調和が心を癒します</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <span class="feature-emoji">💫</span>
+          <div class="feature-content">
+            <h3>フローティング効果</h3>
+            <p>浮遊するビジュアルが軽やかな印象を与えます</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <span class="feature-emoji">🪄</span>
+          <div class="feature-content">
+            <h3>グラスモーフィズム</h3>
+            <p>透明感のあるカードが奥行きを生み出します</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <span class="feature-emoji">🌈</span>
+          <div class="feature-content">
+            <h3>グラデーション</h3>
+            <p>多層的な色彩が深みと広がりを表現します</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2 class="cta-title">夢の世界を体験しよう</h2>
+      <a href="#" class="cta-button">始める</a>
+    </section>
+  </div>
+</body>
+</html>

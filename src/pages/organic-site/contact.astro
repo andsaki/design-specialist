@@ -198,6 +198,26 @@ const base = import.meta.env.BASE_URL;
 			</div>
 		</section>
 
+		<!-- Navigation Helper -->
+		<section class="nav-helper">
+			<div class="container">
+				<div class="helper-content">
+					<div class="helper-text">
+						<h3>まだ決めていませんか？</h3>
+						<p>サービスやチームについて、もう少し詳しく見てみましょう</p>
+					</div>
+					<div class="helper-buttons">
+						<a href={`${base}organic-site/services`} class="btn btn-secondary">
+							サービスを見る
+						</a>
+						<a href={`${base}organic-site/about`} class="btn btn-secondary">
+							チームを知る
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<Footer />
 
 		<style>
@@ -429,11 +449,60 @@ const base = import.meta.env.BASE_URL;
 				box-shadow: var(--shadow-md);
 			}
 
+			/* Navigation Helper */
+			.nav-helper {
+				padding: var(--spacing-4xl) 0;
+			}
+
+			.helper-content {
+				background: var(--color-surface);
+				padding: var(--spacing-3xl);
+				border-radius: var(--radius-lg);
+				box-shadow: var(--shadow-md);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: var(--spacing-xl);
+			}
+
+			.helper-text h3 {
+				font-family: var(--font-display);
+				font-size: var(--font-size-2xl);
+				color: var(--color-primary);
+				margin-bottom: var(--spacing-xs);
+			}
+
+			.helper-text p {
+				font-size: var(--font-size-base);
+				color: var(--color-text-light);
+			}
+
+			.helper-buttons {
+				display: flex;
+				gap: var(--spacing-md);
+				flex-shrink: 0;
+			}
+
 			/* Responsive */
 			@media (max-width: 968px) {
 				.contact-layout {
 					grid-template-columns: 1fr;
 					gap: var(--spacing-2xl);
+				}
+
+				.helper-content {
+					flex-direction: column;
+					text-align: center;
+					padding: var(--spacing-2xl);
+				}
+
+				.helper-buttons {
+					flex-direction: column;
+					width: 100%;
+				}
+
+				.helper-buttons .btn {
+					width: 100%;
 				}
 			}
 

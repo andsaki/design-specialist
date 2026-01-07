@@ -1,0 +1,246 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href={`${base}soft-sweet-dreams-site/`} class="logo">
+        <span class="logo-icon">✨</span>
+        <span class="logo-text">Sweet Dreams</span>
+      </a>
+
+      <button class="mobile-menu-toggle" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu">
+        <li><a href={`${base}soft-sweet-dreams-site/`}>Home</a></li>
+        <li><a href={`${base}soft-sweet-dreams-site/about`}>About</a></li>
+        <li><a href={`${base}soft-sweet-dreams-site/services`}>Services</a></li>
+        <li><a href={`${base}soft-sweet-dreams-site/contact`} class="btn-nav">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+  }
+
+  .site-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.8) 50%,
+      transparent
+    );
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dream-deep-purple);
+    transition: transform 0.3s ease;
+  }
+
+  .logo:hover {
+    transform: translateY(-2px);
+  }
+
+  .logo-icon {
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .logo-text {
+    background: linear-gradient(135deg,
+      var(--dream-accent-1) 0%,
+      var(--dream-accent-2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--dream-deep-purple);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dream-purple);
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .nav-menu a:not(.btn-nav)::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--dream-accent-1), var(--dream-accent-2));
+    transition: width 0.3s ease;
+  }
+
+  .nav-menu a:not(.btn-nav):hover {
+    color: var(--dream-deep-purple);
+  }
+
+  .nav-menu a:not(.btn-nav):hover::after {
+    width: 100%;
+  }
+
+  .btn-nav {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--dream-accent-1), var(--dream-accent-2));
+    color: var(--dream-white);
+    border-radius: var(--radius-full);
+    box-shadow: 0 4px 16px rgba(192, 132, 252, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .btn-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(192, 132, 252, 0.4);
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .mobile-menu-toggle {
+      display: flex;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 2rem;
+      gap: 1.5rem;
+      box-shadow: 0 10px 30px rgba(139, 126, 159, 0.2);
+      transform: translateY(-150%);
+      transition: transform 0.4s ease;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .nav-menu.active {
+      transform: translateY(0);
+    }
+
+    .nav-menu a {
+      font-size: 1.25rem;
+    }
+
+    .btn-nav {
+      width: 100%;
+      text-align: center;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translateY(8px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-8px);
+    }
+  }
+</style>
+
+<script>
+  // Mobile menu toggle
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const menu = document.querySelector('.nav-menu');
+
+  toggle?.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    menu?.classList.toggle('active');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest('.nav')) {
+      toggle?.classList.remove('active');
+      menu?.classList.remove('active');
+    }
+  });
+
+  // Close menu on link click
+  const navLinks = document.querySelectorAll('.nav-menu a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      toggle?.classList.remove('active');
+      menu?.classList.remove('active');
+    });
+  });
+</script>
